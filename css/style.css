@@ -472,7 +472,7 @@ h6,
 /*** Project ***/
 .project-carousel {
     position: relative;
-    background: var(--dark);
+    background: white;
 }
 
 .project-item {
@@ -698,4 +698,8 @@ h6,
 .copyright {
     color: #B0B9AE;
     border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.text-primary {
+    color: #ffffff !important;
 }
