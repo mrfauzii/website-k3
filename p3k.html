@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Industro - Industrial HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Simple hover effect */
+        .card {
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Icon wrapper */
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Button styles */
+        .btn {
+            font-weight: 500;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        /* Custom Colors untuk Template - SESUAI BOOTSTRAP 5.3.0 */
+        .bg-purple {
+            background-color: #6f42c1 !important;
+        }
+
+        .bg-orange {
+            background-color: #fd7e14 !important;
+        }
+
+        .text-purple {
+            color: #6f42c1 !important;
+        }
+
+        .text-orange {
+            color: #fd7e14 !important;
+        }
+
+        .border-purple {
+            border-color: #6f42c1 !important;
+        }
+
+        .border-orange {
+            border-color: #fd7e14 !important;
+        }
+
+        /* Custom Alert Colors - SESUAI BOOTSTRAP 5.3.0 */
+        .alert-purple {
+            background-color: rgba(111, 66, 193, 0.1);
+            border-left: 4px solid #6f42c1;
+            color: #212529 !important;
+            /* Warna teks default Bootstrap 5.3.0 */
+        }
+
+        .alert-orange {
+            background-color: rgba(253, 126, 20, 0.1);
+            border-left: 4px solid #fd7e14;
+            color: #212529 !important;
+            /* Warna teks default Bootstrap 5.3.0 */
+        }
+
+        /* Custom Outline Buttons - SESUAI BOOTSTRAP 5.3.0 */
+        .btn-outline-purple {
+            border-color: #6f42c1;
+            color: #6f42c1;
+        }
+
+        .btn-outline-purple:hover {
+            background-color: #6f42c1;
+            color: #fff !important;
+            /* Warna teks putih saat hover */
+        }
+
+        .btn-outline-orange {
+            border-color: #fd7e14;
+            color: #fd7e14;
+        }
+
+        .btn-outline-orange:hover {
+            background-color: #fd7e14;
+            color: #fff !important;
+            /* Warna teks putih saat hover */
+        }
+
+        /* Modal enhancements - SESUAI BOOTSTRAP 5.3.0 */
+        .modal-content {
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-header {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .alert {
+            border: none;
+            border-left: 4px solid;
+        }
+
+        /* Card hover effect */
+        .card {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Perbaikan untuk konsistensi warna modal - SESUAI BOOTSTRAP 5.3.0 */
+        .modal-header.bg-danger {
+            background-color: #dc3545 !important;
+            color: #fff !important;
+        }
+
+        .modal-header.bg-warning {
+            background-color: #ffc107 !important;
+            color: #000 !important;
+        }
+
+        .modal-header.bg-primary {
+            background-color: #0d6efd !important;
+            color: #fff !important;
+        }
+
+        .modal-header.bg-info {
+            background-color: #0dcaf0 !important;
+            color: #000 !important;
+        }
+
+        .modal-header.bg-success {
+            background-color: #198754 !important;
+            color: #fff !important;
+        }
+
+        .modal-header.bg-purple {
+            background-color: #6f42c1 !important;
+            color: #fff !important;
+        }
+
+        .modal-header.bg-secondary {
+            background-color: #6c757d !important;
+            color: #fff !important;
+        }
+
+        .modal-header.bg-orange {
+            background-color: #fd7e14 !important;
+            color: #fff !important;
+        }
+
+        /* Perbaikan untuk modal header text color - SESUAI BOOTSTRAP 5.3.0 */
+        .modal-header.bg-warning .modal-title,
+        .modal-header.bg-info .modal-title,
+        .modal-header.bg-warning .btn-close,
+        .modal-header.bg-info .btn-close {
+            color: #000 !important;
+        }
+
+        .modal-header.bg-danger .modal-title,
+        .modal-header.bg-primary .modal-title,
+        .modal-header.bg-success .modal-title,
+        .modal-header.bg-purple .modal-title,
+        .modal-header.bg-secondary .modal-title,
+        .modal-header.bg-orange .modal-title,
+        .modal-header.bg-danger .btn-close,
+        .modal-header.bg-primary .btn-close,
+        .modal-header.bg-success .btn-close,
+        .modal-header.bg-purple .btn-close,
+        .modal-header.bg-secondary .btn-close,
+        .modal-header.bg-orange .btn-close {
+            color: #fff !important;
+        }
+
+        /* Perbaikan untuk konsistensi button - SESUAI BOOTSTRAP 5.3.0 */
+        .btn-outline-warning:hover {
+            background-color: #ffc107;
+            color: #000 !important;
+        }
+
+        .btn-outline-info:hover {
+            background-color: #0dcaf0;
+            color: #000 !important;
+        }
+
+        /* Warna teks untuk card dan konten - SESUAI BOOTSTRAP 5.3.0 */
+        .card .text-dark {
+            color: #212529 !important;
+            /* --bs-body-color di Bootstrap 5.3.0 */
+        }
+
+        .card .text-muted {
+            color: #6c757d !important;
+            /* --bs-secondary-color di Bootstrap 5.3.0 */
+        }
+
+        /* Background light untuk modal sections - SESUAI BOOTSTRAP 5.3.0 */
+        .bg-light {
+            background-color: #f8f9fa !important;
+            /* --bs-light di Bootstrap 5.3.0 */
+        }
+
+        /* Shadow untuk card - SESUAI BOOTSTRAP 5.3.0 */
+        .shadow-sm {
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+        }
+
+        /* Border radius - SESUAI BOOTSTRAP 5.3.0 */
+        .rounded {
+            border-radius: 0.375rem !important;
+        }
+
+        .rounded-circle {
+            border-radius: 50% !important;
+        }
+
+        /* Tambahan untuk memastikan konsistensi dengan Bootstrap 5.3.0 */
+        .text-danger {
+            color: #dc3545 !important;
+        }
+
+        .text-warning {
+            color: #ffc107 !important;
+        }
+
+        .text-primary {
+            color: #0d6efd !important;
+        }
+
+        .text-info {
+            color: #0dcaf0 !important;
+        }
+
+        .text-success {
+            color: #198754 !important;
+        }
+
+        .text-secondary {
+            color: #6c757d !important;
+        }
+
+        .bg-danger {
+            background-color: #dc3545 !important;
+        }
+
+        .bg-warning {
+            background-color: #ffc107 !important;
+        }
+
+        .bg-primary {
+            background-color: #0d6efd !important;
+        }
+
+        .bg-info {
+            background-color: #0dcaf0 !important;
+        }
+
+        .bg-success {
+            background-color: #198754 !important;
+        }
+
+        .bg-secondary {
+            background-color: #6c757d !important;
+        }
+
+        /* Button outline colors sesuai Bootstrap 5.3.0 */
+        .btn-outline-danger:hover {
+            color: #fff !important;
+        }
+
+        .btn-outline-primary:hover {
+            color: #fff !important;
+        }
+
+        .btn-outline-success:hover {
+            color: #fff !important;
+        }
+
+        .btn-rounded {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .position-relative:hover .btn {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
+        <a href="index.html" class="navbar-brand ps-5 me-0">
+            <h1 class="text-white m-0">Industro</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h6 class="text-white animated slideInRight fw-bold" style="font-size: 28px;">
+                Pertolongan Pertama (P3K)
+            </h6>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <section class="container py-5">
+        <div class="text-center mt-auto">
+            <div class="alert alert-secondary">
+                <h6 class="mb-2"><i class="fas fa-lightbulb me-2"></i>Tips Penting:</h6>
+                <p class="small mb-0">Penanganan darurat medis sesuai potensi bahaya di lingkungan kerja PT Petrokimia
+                    Gresik</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Paparan Bahan Kimia -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-wrapper bg-danger rounded-circle mx-auto mb-3 p-3">
+                            <i class="fas fa-flask text-white" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-dark mb-2">Paparan Bahan Kimia</h5>
+                        <p class="text-muted small">
+                            Dekontaminasi dan penanganan korban terpapar bahan kimia berbahaya (asam, basa, pelarut).
+                        </p>
+                        <button class="btn btn-outline-danger btn-sm mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalKimia">
+                            <i class="fas fa-shower me-2"></i>Cara Penanganan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Luka Bakar -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-wrapper bg-warning rounded-circle mx-auto mb-3 p-3">
+                            <i class="fas fa-fire text-white" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-dark mb-2">Luka Bakar</h5>
+                        <p class="text-muted small">
+                            Penanganan luka bakar termal/kimia dengan teknik pendinginan dan pencegahan infeksi.
+                        </p>
+                        <button class="btn btn-outline-warning btn-sm mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalLukaBakar">
+                            <i class="fas fa-fire-extinguisher me-2"></i>Cara Penanganan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Luka & Perdarahan -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-wrapper bg-primary rounded-circle mx-auto mb-3 p-3">
+                            <i class="fas fa-tint text-white" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-dark mb-2">Luka & Perdarahan</h5>
+                        <p class="text-muted small">
+                            Penanganan luka terbuka dan perdarahan dengan teknik tekanan langsung dan pembalutan.
+                        </p>
+                        <button class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalPerdarahan">
+                            <i class="fas fa-first-aid me-2"></i>Cara Penanganan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Luka pada Mata -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-wrapper bg-info rounded-circle mx-auto mb-3 p-3">
+                            <i class="fas fa-eye text-white" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-dark mb-2">Luka pada Mata</h5>
+                        <p class="text-muted small">
+                            Penanganan cedera mata akibat bahan kimia atau benda asing.
+                        </p>
+                        <button class="btn btn-outline-info btn-sm mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalLukaMata">
+                            <i class="fas fa-eye-dropper me-2"></i>Cara Penanganan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gangguan Pernapasan -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-wrapper bg-success rounded-circle mx-auto mb-3 p-3">
+                            <i class="fas fa-lungs text-white" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-dark mb-2">Gangguan Pernapasan</h5>
+                        <p class="text-muted small">
+                            Penanganan korban terpapar gas beracun (H2S, NH3, CO) dan kesulitan bernapas.
+                        </p>
+                        <button class="btn btn-outline-success btn-sm mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalPernapasan">
+                            <i class="fas fa-wind me-2"></i>Cara Penanganan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sengatan Listrik -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-wrapper bg-purple rounded-circle mx-auto mb-3 p-3">
+                            <i class="fas fa-bolt text-white" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-dark mb-2">Sengatan Listrik</h5>
+                        <p class="text-muted small">
+                            Teknik memutus kontak listrik dan penanganan korban tersengat listrik.
+                        </p>
+                        <button class="btn btn-outline-purple btn-sm mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalListrik">
+                            <i class="fas fa-plug me-2"></i>Cara Penanganan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Patah Tulang -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-wrapper bg-secondary rounded-circle mx-auto mb-3 p-3">
+                            <i class="fas fa-bone text-white" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-dark mb-2">Patah Tulang</h5>
+                        <p class="text-muted small">
+                            Identifikasi dan stabilisasi patah tulang sebelum evakuasi ke fasilitas medis.
+                        </p>
+                        <button class="btn btn-outline-secondary btn-sm mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalPatahTulang">
+                            <i class="fas fa-crutch me-2"></i>Cara Penanganan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CPR & Bantuan Hidup -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-wrapper bg-danger rounded-circle mx-auto mb-3 p-3">
+                            <i class="fas fa-heartbeat text-white" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-dark mb-2">CPR & Bantuan Hidup</h5>
+                        <p class="text-muted small">
+                            Resusitasi Jantung Paru (RJP) untuk korban henti jantung dan pernapasan.
+                        </p>
+                        <button class="btn btn-outline-danger btn-sm mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalCPR">
+                            <i class="fas fa-hand-holding-heart me-2"></i>Cara Penanganan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Syok -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="icon-wrapper bg-orange rounded-circle mx-auto mb-3 p-3">
+                            <i class="fas fa-procedures text-white" style="font-size: 2rem;"></i>
+                        </div>
+                        <h5 class="text-dark mb-2">Syok</h5>
+                        <p class="text-muted small">
+                            Mengenali tanda-tanda syok dan stabilisasi korban sebelum evakuasi.
+                        </p>
+                        <button class="btn btn-outline-orange btn-sm mt-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalSyok">
+                            <i class="fas fa-bed me-2"></i>Cara Penanganan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal: Paparan Bahan Kimia -->
+    <div class="modal fade" id="modalKimia" tabindex="-1" aria-labelledby="modalKimiaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="modalKimiaLabel">
+                        <i class="fas fa-flask me-2"></i>Penanganan Paparan Bahan Kimia
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-danger">
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Langkah Penanganan:</h6>
+                                <ol class="small mb-0">
+                                    <li>Gunakan APD yang sesuai sebelum mendekati korban</li>
+                                    <li>Pindahkan korban dari area terkontaminasi</li>
+                                    <li>Lepaskan pakaian terkontaminasi dengan hati-hati</li>
+                                    <li>Bilas area terpapar dengan air mengalir 15-20 menit</li>
+                                    <li>Untuk mata, bilas dari sudut dalam ke luar</li>
+                                    <li>Jangan gunakan penawar tanpa instruksi medis</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-warning">
+                                <h6><i class="fas fa-shield-alt me-2"></i>Pencegahan:</h6>
+                                <ul class="small mb-0">
+                                    <li>Selalu gunakan APD sesuai MSDS bahan kimia</li>
+                                    <li>Kenali simbol bahaya dan prosedur darurat</li>
+                                    <li>Simpan bahan kimia dalam wadah yang tepat</li>
+                                    <li>Lakukan pelatihan penanganan bahan kimia berkala</li>
+                                    <li>Sediakan shower darurat dan eye wash station</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h6 class="text-danger mb-2"><i class="fas fa-clock me-2"></i>Waktu Kritis:</h6>
+                        <p class="small mb-0">Penanganan dalam 10 menit pertama sangat menentukan. Segera hubungi tim
+                            medis dan bawa informasi bahan kimia yang terpapar.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Luka Bakar -->
+    <div class="modal fade" id="modalLukaBakar" tabindex="-1" aria-labelledby="modalLukaBakarLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title" id="modalLukaBakarLabel">
+                        <i class="fas fa-fire me-2"></i>Penanganan Luka Bakar
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-warning">
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Langkah Penanganan:</h6>
+                                <ol class="small mb-0">
+                                    <li>Hentikan proses pembakaran (jauhkan dari sumber api/panas)</li>
+                                    <li>Bakar termal: dinginkan dengan air mengalir 10-15 menit</li>
+                                    <li>Bakar kimia: bilas dengan air mengalir minimal 20 menit</li>
+                                    <li>Lepaskan pakaian/jewelry yang tidak menempel di luka</li>
+                                    <li>Tutup luka dengan kasa steril atau kain bersih</li>
+                                    <li>Jangan pecahkan gelembung atau oleskan pasta/mentega</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-info">
+                                <h6><i class="fas fa-shield-alt me-2"></i>Klasifikasi Luka Bakar:</h6>
+                                <ul class="small mb-0">
+                                    <li><strong>Derajat 1:</strong> Kemerahan, nyeri (contoh: sunburn)</li>
+                                    <li><strong>Derajat 2:</strong> Kemerahan, lepuh, nyeri hebat</li>
+                                    <li><strong>Derajat 3:</strong> Kulit putih/kehitaman, tidak nyeri (saraf rusak)
+                                    </li>
+                                    <li>Segera ke RS untuk luka bakar >10% tubuh atau di area wajah/tangan</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h6 class="text-warning mb-2"><i class="fas fa-clock me-2"></i>Waktu Kritis:</h6>
+                        <p class="small mb-0">Pendinginan segera dalam 3 menit pertama mengurangi keparahan luka bakar.
+                            Untuk luka bakar kimia, bilas minimal 20 menit.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Luka & Perdarahan -->
+    <div class="modal fade" id="modalPerdarahan" tabindex="-1" aria-labelledby="modalPerdarahanLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="modalPerdarahanLabel">
+                        <i class="fas fa-tint me-2"></i>Penanganan Luka & Perdarahan
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-primary">
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Langkah Penanganan Perdarahan:</h6>
+                                <ol class="small mb-0">
+                                    <li>Gunakan sarung tangan lateks/nitrile untuk perlindungan</li>
+                                    <li>Baringkan korban dan elevasi area yang terluka</li>
+                                    <li>Tekan langsung pada luka dengan kasa steril/kain bersih</li>
+                                    <li>Jika tembus, pertahankan tekanan 10-15 menit</li>
+                                    <li>Jangan angkat pembalut untuk melihat luka</li>
+                                    <li>Jika darah merembes, tambah lapisan pembalut baru</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-info">
+                                <h6><i class="fas fa-first-aid me-2"></i>Pertolongan Lanjutan:</h6>
+                                <ul class="small mb-0">
+                                    <li>Perdarahan hebat: gunakan tekanan titik arteri jika perlu</li>
+                                    <li>Bersihkan luka kecil dengan air bersih dan sabun</li>
+                                    <li>Oleskan antiseptik dan tutup dengan plester/kasa</li>
+                                    <li>Waspada tanda infeksi: kemerahan, bengkak, nanah</li>
+                                    <li>Periksa status tetanus jika luka dalam/kotor</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h6 class="text-primary mb-2"><i class="fas fa-clock me-2"></i>Waktu Kritis:</h6>
+                        <p class="small mb-0">Perdarahan arteri (darah memancar) dapat menyebabkan syok dalam 2-3 menit.
+                            Segera cari bantuan medis untuk perdarahan berat.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Luka pada Mata -->
+    <div class="modal fade" id="modalLukaMata" tabindex="-1" aria-labelledby="modalLukaMataLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title" id="modalLukaMataLabel">
+                        <i class="fas fa-eye me-2"></i>Penanganan Luka pada Mata
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-info">
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Langkah Penanganan Benda Asing:</h6>
+                                <ol class="small mb-0">
+                                    <li>Cuci tangan sebelum menangani mata</li>
+                                    <li>Jangan menggosok mata yang terkena benda asing</li>
+                                    <li>Bilas mata dengan air bersih mengalir atau larutan saline</li>
+                                    <li>Gunakan gelas cuci mata atau wadah bersih</li>
+                                    <li>Bilas dari sudut dalam ke sudut luar mata</li>
+                                    <li>Jika tidak berhasil, tutup mata dan cari bantuan medis</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-warning">
+                                <h6><i class="fas fa-eye-dropper me-2"></i>Penanganan Bahan Kimia di Mata:</h6>
+                                <ul class="small mb-0">
+                                    <li>Segera bilas dengan air mengalir minimal 15-20 menit</li>
+                                    <li>Paksa mata terbuka dengan jari selama pembilasan</li>
+                                    <li>Gerakkan mata ke segala arah selama pembilasan</li>
+                                    <li>Jangan gunakan penetral kimia</li>
+                                    <li>Setelah bilas, tutup mata dengan kasa steril longgar</li>
+                                    <li>Segera cari pertolongan medis darurat</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h6 class="text-info mb-2"><i class="fas fa-clock me-2"></i>Waktu Kritis:</h6>
+                        <p class="small mb-0">Untuk paparan bahan kimia di mata, pembilasan harus dimulai dalam 10 detik
+                            pertama untuk mencegah kerusakan permanen.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Gangguan Pernapasan -->
+    <div class="modal fade" id="modalPernapasan" tabindex="-1" aria-labelledby="modalPernapasanLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="modalPernapasanLabel">
+                        <i class="fas fa-lungs me-2"></i>Penanganan Gangguan Pernapasan
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-success">
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Langkah Penanganan Umum:</h6>
+                                <ol class="small mb-0">
+                                    <li>Pindahkan korban ke area dengan udara segar</li>
+                                    <li>Longgarkan pakaian ketat di leher/dada</li>
+                                    <li>Baringkan dalam posisi setengah duduk (jika sadar)</li>
+                                    <li>Periksa jalan napas, pastikan tidak ada sumbatan</li>
+                                    <li>Pantau pernapasan dan kesadaran terus menerus</li>
+                                    <li>Siapkan oksigen jika tersedia dan terlatih</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-warning">
+                                <h6><i class="fas fa-wind me-2"></i>Penanganan Khusus Gas Beracun:</h6>
+                                <ul class="small mb-0">
+                                    <li><strong>H2S:</strong> Gunakan SCBA, gejala: iritasi mata/hidung, pusing</li>
+                                    <li><strong>NH3:</strong> Iritasi saluran napas, batuk, sesak napas</li>
+                                    <li><strong>CO:</strong> Tidak berbau, gejala: sakit kepala, mual, pusing</li>
+                                    <li>Selalu gunakan APD pernapasan yang sesuai</li>
+                                    <li>Evakuasi ke area berventilasi baik</li>
+                                    <li>Segera cari bantuan medis darurat</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h6 class="text-success mb-2"><i class="fas fa-clock me-2"></i>Waktu Kritis:</h6>
+                        <p class="small mb-0">Paparan gas beracun seperti H2S dapat menyebabkan henti napas dalam
+                            hitungan menit. Selalu prioritaskan keselamatan penolong dengan menggunakan APD yang tepat.
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Sengatan Listrik -->
+    <div class="modal fade" id="modalListrik" tabindex="-1" aria-labelledby="modalListrikLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-purple text-white">
+                    <h5 class="modal-title" id="modalListrikLabel">
+                        <i class="fas fa-bolt me-2"></i>Penanganan Sengatan Listrik
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-purple">
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Langkah Pertolongan Pertama:</h6>
+                                <ol class="small mb-0">
+                                    <li>JANGAN sentuh korban yang masih terhubung ke sumber listrik</li>
+                                    <li>Matikan sumber listrik (jika aman dan memungkinkan)</li>
+                                    <li>Gunakan benda tidak konduktif (kayu, plastik) untuk memisahkan korban</li>
+                                    <li>Periksa respons dan pernapasan korban</li>
+                                    <li>Lakukan RJP jika tidak bernapas/tidak responsif</li>
+                                    <li>Rawat luka bakar dan cedera lainnya</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-warning">
+                                <h6><i class="fas fa-plug me-2"></i>Pencegahan & Keselamatan:</h6>
+                                <ul class="small mb-0">
+                                    <li>Selalu gunakan LOTO (Lock Out Tag Out) saat bekerja dengan listrik</li>
+                                    <li>Gunakan alat pelindung diri yang sesuai (sarung tangan isolasi, sepatu safety)
+                                    </li>
+                                    <li>Periksa kondisi kabel dan peralatan listrik secara berkala</li>
+                                    <li>Hindari bekerja dekat saluran listrik tegangan tinggi</li>
+                                    <li>Pastikan area kerja kering dan gunakan GFCI untuk peralatan listrik</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h6 class="text-purple mb-2"><i class="fas fa-clock me-2"></i>Waktu Kritis:</h6>
+                        <p class="small mb-0">Henti jantung akibat sengatan listrik membutuhkan RJP segera. Selalu
+                            pastikan area aman sebelum mendekati korban sengatan listrik.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Patah Tulang -->
+    <div class="modal fade" id="modalPatahTulang" tabindex="-1" aria-labelledby="modalPatahTulangLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary text-white">
+                    <h5 class="modal-title" id="modalPatahTulangLabel">
+                        <i class="fas fa-bone me-2"></i>Penanganan Patah Tulang
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-secondary">
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Langkah Penanganan:</h6>
+                                <ol class="small mb-0">
+                                    <li>Jangan pindahkan korban kecuali dalam bahaya</li>
+                                    <li>Imobilisasi area yang cedera dengan bidai</li>
+                                    <li>Gunakan es untuk mengurangi pembengkakan (bungkus dengan kain)</li>
+                                    <li>Elevasi area yang cedera jika memungkinkan</li>
+                                    <li>Periksa sirkulasi di bawah area cedera (warna, suhu, sensasi)</li>
+                                    <li>Jangan coba meluruskan tulang yang patah</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-info">
+                                <h6><i class="fas fa-crutch me-2"></i>Jenis Patah Tulang & Penanganan:</h6>
+                                <ul class="small mb-0">
+                                    <li><strong>Tertutup:</strong> Kulit utuh, imobilisasi dan kompres es</li>
+                                    <li><strong>Terbuka:</strong> Tulang menembus kulit, tutup luka dengan steril</li>
+                                    <li><strong>Kompresi:</strong> Biasanya di tulang belakang, jangan gerakkan</li>
+                                    <li>Selalu curigai cedera tulang belakang jika jatuh dari ketinggian</li>
+                                    <li>Gunakan bidai improvisasi (papan, majalah tebal, selimut)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h6 class="text-secondary mb-2"><i class="fas fa-clock me-2"></i>Waktu Kritis:</h6>
+                        <p class="small mb-0">Patah tulang terbuka berisiko tinggi infeksi. Berikan pertolongan dalam 10
+                            menit pertama dan evakuasi ke fasilitas medis segera.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: CPR & Bantuan Hidup -->
+    <div class="modal fade" id="modalCPR" tabindex="-1" aria-labelledby="modalCPRLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="modalCPRLabel">
+                        <i class="fas fa-heartbeat me-2"></i>CPR & Bantuan Hidup Dasar
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-danger">
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Langkah RJP (C-A-B):</h6>
+                                <ol class="small mb-0">
+                                    <li><strong>C</strong>heck - Periksa respons dan pernapasan</li>
+                                    <li><strong>A</strong>irway - Buka jalan napas (head tilt-chin lift)</li>
+                                    <li><strong>B</strong>reathing - Beri napas buatan (jika terlatih)</li>
+                                    <li>Kompresi dada: 100-120x/menit, kedalaman 5-6 cm</li>
+                                    <li>Rasio 30:2 (30 kompresi : 2 napas buatan)</li>
+                                    <li>Lanjutkan sampai bantuan datang atau korban responsif</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-warning">
+                                <h6><i class="fas fa-hand-holding-heart me-2"></i>Penggunaan AED:</h6>
+                                <ul class="small mb-0">
+                                    <li>Nyalakan AED dan ikuti instruksi suara</li>
+                                    <li>Tempelkan pad sesuai diagram (kanan atas, kiri bawah)</li>
+                                    <li>Pastikan tidak ada yang menyentuh korban saat analisis</li>
+                                    <li>Lakukan kejut jika disarankan AED</li>
+                                    <li>Lanjutkan RJP segera setelah kejut</li>
+                                    <li>Jangan lepaskan pad AED, biarkan tetap terpasang</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h6 class="text-danger mb-2"><i class="fas fa-clock me-2"></i>Waktu Kritis:</h6>
+                        <p class="small mb-0">RJP harus dimulai dalam 4-6 menit setelah henti jantung untuk mencegah
+                            kerusakan otak permanen. Setiap penundaan 1 menit mengurangi kesempatan hidup 7-10%.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Syok -->
+    <div class="modal fade" id="modalSyok" tabindex="-1" aria-labelledby="modalSyokLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-orange text-white">
+                    <h5 class="modal-title" id="modalSyokLabel">
+                        <i class="fas fa-procedures me-2"></i>Penanganan Syok
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-orange">
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Tanda-Tanda Syok:</h6>
+                                <ul class="small mb-0">
+                                    <li>Kulit pucat, dingin, dan berkeringat</li>
+                                    <li>Denyut nadi cepat dan lemah</li>
+                                    <li>Pernapasan cepat dan dangkal</li>
+                                    <li>Gelisah, cemas, atau bingung</li>
+                                    <li>Mual atau muntah</li>
+                                    <li>Penurunan kesadaran</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-warning">
+                                <h6><i class="fas fa-bed me-2"></i>Langkah Penanganan:</h6>
+                                <ol class="small mb-0">
+                                    <li>Baringkan korban dengan posisi telentang</li>
+                                    <li>Elevasi kaki 30-45 cm (kecuali cedera kepala/leher/panggul)</li>
+                                    <li>Jaga suhu tubuh dengan selimut/jaket</li>
+                                    <li>Longgarkan pakaian ketat</li>
+                                    <li>Jangan beri makanan/minuman</li>
+                                    <li>Monitor terus dan siapkan evakuasi medis</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 p-3 bg-light rounded">
+                        <h6 class="text-orange mb-2"><i class="fas fa-clock me-2"></i>Waktu Kritis:</h6>
+                        <p class="small mb-0">Syok yang tidak ditangani dapat menyebabkan kegagalan organ multiple dalam
+                            1-2 jam. Identifikasi dan tangani penyebab syok (perdarahan, dehidrasi, dll) sesegera
+                            mungkin.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Kegiatan P3K Start -->
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Video 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://img.youtube.com/vi/_DhLVPylnTY/maxresdefault.jpg" class="card-img-top"
+                            alt="Pelatihan P3K Dasar" style="height: 200px; object-fit: cover;">
+                        <div class="position-absolute top-50 start-50 translate-middle">
+                            <button class="btn btn-danger btn-lg rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#videoModal" data-video-url="https://www.youtube.com/embed/_DhLVPylnTY">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Pelatihan P3K Dasar</h5>
+                        <p class="card-text text-muted">Pelatihan pertolongan pertama untuk karyawan menghadapi
+                            kecelakaan ringan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://img.youtube.com/vi/D2rO7uDqoYU/maxresdefault.jpg" class="card-img-top"
+                            alt="Simulasi Evakuasi" style="height: 200px; object-fit: cover;">
+                        <div class="position-absolute top-50 start-50 translate-middle">
+                            <button class="btn btn-danger btn-lg rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#videoModal"
+                                data-video-url="https://youtu.be/D2rO7uDqoYU?si=mfkB97t-MpaM-7Oz">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Simulasi Evakuasi</h5>
+                        <p class="card-text text-muted">Simulasi evakuasi dan penanganan cedera di area kerja.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://img.youtube.com/vi/sInQ-WvZqhY/maxresdefault.jpg" class="card-img-top"
+                            alt="Perlengkapan P3K" style="height: 200px; object-fit: cover;">
+                        <div class="position-absolute top-50 start-50 translate-middle">
+                            <button class="btn btn-danger btn-lg rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#videoModal"
+                                data-video-url="https://youtu.be/sInQ-WvZqhY?si=kMNYiBeGglqU0u8R">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Penyediaan Perlengkapan P3K</h5>
+                        <p class="card-text text-muted">Kotak P3K lengkap tersedia di setiap area kerja.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-3">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="youtubeVideo" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5" style="font-size: 13px;">
+
+                <!-- Tentang Kami -->
+                <div class="col-lg-3 col-md-6">
+                    <img src="img/logo-pg-putih.png" alt="Logo PT Petrokimia Gresik" class="img-fluid mb-3"
+                        style="max-width: 130px;">
+                    <p>PT Petrokimia Gresik merupakan Produsen Pupuk Terlengkap di Indonesia yang memproduksi berbagai
+                        macam pupuk dan bahan kimia untuk solusi agroindustri.</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-primary rounded-circle me-2"
+                            href="https://www.facebook.com/petrokimiagresikofficial" target="_blank"
+                            aria-label="Facebook PT Petrokimia Gresik">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href="https://twitter.com/petrokimiaG"
+                            target="_blank" aria-label="Twitter PT Petrokimia Gresik">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"
+                            href="https://www.youtube.com/@PetrokimiaGresikOfficial" target="_blank"
+                            aria-label="YouTube PT Petrokimia Gresik">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"
+                            href="https://www.instagram.com/petrokimiagresikofficial/" target="_blank"
+                            aria-label="Instagram PT Petrokimia Gresik">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kantor Pusat -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4" style="font-size: 15px;">KANTOR PUSAT</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Jenderal Ahmad Yani - Gresik 61119</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
+                        <a href="tel:0313981811" class="footer-link">031-3981811</a>,
+                        <a href="tel:0313982100" class="footer-link">3982100</a>,
+                        <a href="tel:0313982200" class="footer-link">3982200</a>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-fax me-3"></i>031-3981722, 3982272</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
+                        <a href="mailto:pg@petrokimia-gresik.com" class="footer-link">pg@petrokimia-gresik.com</a>
+                    </p>
+                </div>
+
+                <!-- Kantor Perwakilan -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4" style="font-size: 15px;">KANTOR PERWAKILAN</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Tanah Abang II No. 63, Petojo Selatan,
+                        Gambir - Jakarta Pusat 10160</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
+                        <a href="tel:02122035019" class="footer-link">021-22035019</a>,
+                        <a href="tel:02122036050" class="footer-link">021-22036050</a>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-mobile-alt me-3"></i>
+                        <a href="tel:08118303014" class="footer-link">0811 8303 014</a>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
+                        <a href="mailto:perjaka@petrokimia-gresik.com"
+                            class="footer-link">perjaka@petrokimia-gresik.com</a>
+                    </p>
+                </div>
+
+                <!-- Pusat Layanan Pelanggan -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4" style="font-size: 15px;">PUSAT LAYANAN PELANGGAN</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Gedung Graha Phonska, Lantai 4 Jl. Tanah
+                        Abang III No.16 Jakarta Pusat 10160</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
+                        <a href="tel:08001008001" class="footer-link">0800 1008001 (Bebas Pulsa)</a>
+                    </p>
+                    <p class="mb-2"><i class="fab fa-whatsapp me-3"></i>
+                        <a href="https://wa.me/628119918001?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20produk%20PT%20Petrokimia%20Gresik"
+                            target="_blank" class="footer-link">0811 9918 001</a>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
+                        <a href="mailto:konsumen@pupuk-indonesia.com"
+                            class="footer-link">konsumen@pupuk-indonesia.com</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+        <div class="container text-center">
+            <p class="mb-2">Copyright &copy; <span id="current-year">2025</span> <a class="fw-semi-bold"
+                    href="#">Kelompok 7</a>, All Right Reserved.</p>
+            <p class="mb-0">Mata Kuliah Keselamatan dan Kesehatan Kerja</p>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Script untuk ganti video saat modal dibuka -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoModal = document.getElementById('videoModal');
+            const videoButtons = document.querySelectorAll('[data-bs-target="#videoModal"]');
+
+            videoButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const videoUrl = this.getAttribute('data-video-url');
+                    const iframe = document.getElementById('youtubeVideo');
+                    iframe.src = videoUrl;
+                });
+            });
+
+            videoModal.addEventListener('hidden.bs.modal', function () {
+                const iframe = document.getElementById('youtubeVideo');
+                iframe.src = '';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
