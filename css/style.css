@@ -703,3 +703,14 @@ h6,
 .text-primary {
     color: #ffffff !important;
 }
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #ffffff;
+  text-decoration: underline;
+}
