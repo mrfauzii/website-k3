@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Industro - Industrial HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+     <style>
+        /* style.css - Style minimalis untuk konten APD */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .apd-criteria {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .criteria-card {
+            display: flex;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0e0e0;
+        }
+
+        .criteria-image {
+            flex: 0.7;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border-right: 1px solid #e0e0e0;
+            padding: 30px;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Semua gambar pekerja */
+        .worker-image,
+        .main-worker-image {
+            width: 400px;
+            /* lebar tetap */
+            height: 400px;
+            /* tinggi tetap agar seragam */
+            object-fit: cover;
+            /* isi penuh kotak tapi tetap proporsional */
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            background-color: #fff;
+        }
+
+        .apd-items {
+            flex: 1;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .job-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .apd-list {
+            list-style-type: none;
+            margin-bottom: 25px;
+        }
+
+        .apd-item {
+            padding: 20px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .apd-icon {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            border-radius: 8px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #e0e0e0;
+        }
+
+        .apd-icon img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+        }
+
+        .apd-content {
+            flex: 1;
+        }
+
+        .apd-name {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .apd-description {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .safety-note {
+            background: #e74c3c;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #c0392b;
+        }
+
+        .safety-note div {
+            font-size: 1rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        /* Warna untuk kategori konstruksi */
+        .construction .job-title {
+            border-bottom-color: #e67e22;
+        }
+
+        .construction .apd-item {
+            border-left-color: #e67e22;
+        }
+
+        /* Warna untuk kategori medis */
+        .medical .job-title {
+            border-bottom-color: #3498db;
+        }
+
+        .medical .apd-item {
+            border-left-color: #3498db;
+        }
+
+        /* Warna untuk kategori pabrik */
+        .factory .job-title {
+            border-bottom-color: #9b59b6;
+        }
+
+        .factory .apd-item {
+            border-left-color: #9b59b6;
+        }
+
+        .image-caption {
+            text-align: center;
+            font-size: 1rem;
+            color: #666;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        /* Responsif */
+        @media (max-width: 992px) {
+            .criteria-card {
+                flex-direction: column;
+            }
+
+            .criteria-image {
+                min-height: 300px;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+                padding: 25px;
+            }
+
+            .main-worker-image {
+                max-width: 350px;
+            }
+
+            .apd-items {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .apd-items {
+                padding: 20px;
+            }
+
+            .job-title {
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+            }
+
+            .apd-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+                padding: 15px;
+            }
+
+            .apd-icon {
+                width: 70px;
+                height: 70px;
+                align-self: center;
+            }
+
+            .criteria-image {
+                min-height: 250px;
+                padding: 20px;
+            }
+
+            .main-worker-image {
+                max-width: 280px;
+            }
+
+            .safety-note {
+                padding: 15px;
+            }
+        }
+
+        /* =========================================== */
+        /* STYLE BARU UNTUK APD OVERVIEW - TANPA MENGUBAH STYLE SEBELUMNYA */
+        /* =========================================== */
+
+        .apd-overview {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .apd-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+            font-weight: 600;
+        }
+
+        .apd-section {
+            margin-bottom: 50px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0e0e0;
+        }
+
+        .apd-section-title {
+            font-size: 1.8rem;
+            padding: 20px 30px;
+            margin: 0;
+            color: white;
+            font-weight: 600;
+        }
+
+        .apd-section-title.helm {
+            background: #e67e22;
+        }
+
+        .apd-section-title.masker {
+            background: #3498db;
+        }
+
+        .apd-section-title.sepatu {
+            background: #9b59b6;
+        }
+
+        .apd-section-title.seragam {
+            background: #2ecc71;
+        }
+
+        .apd-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .apd-overview .apd-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .apd-overview .apd-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .apd-overview .apd-item img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background: white;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .apd-overview .apd-item p {
+            margin: 0;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        /* Responsif untuk APD Overview */
+        @media (max-width: 768px) {
+            .apd-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            .apd-overview .apd-item img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .apd-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .apd-overview .apd-item {
+                padding: 15px;
+            }
+            
+            .apd-overview .apd-item img {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .apd-title {
+                font-size: 1.8rem;
+            }
+            
+            .apd-section-title {
+                font-size: 1.5rem;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
+        <a href="index.html" class="navbar-brand ps-5 me-0">
+            <h1 class="text-white m-0">Industro</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h6 class="text-white animated slideInRight fw-bold" style="font-size: 28px;">
+                Pertolongan Pertama (P3K)
+            </h6>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <div class="apd-overview">
+        <h2 class="apd-title">APD Karyawan Petrokimia Gresik</h2>
+
+        <div class="apd-section">
+            <h3 class="apd-section-title helm">Helm Safety</h3>
+            <div class="apd-grid">
+                <div class="apd-item">
+                    <img src="img/helm-pemadam.png" alt="Pemadam Kebakaran">
+                    <p>Pemadam Kebakaran</p>
+                </div>
+                <div class="apd-item">
+                    <img src="img/helm-safety-officer.png" alt="Safety Officer">
+                    <p>Safety Officer</p>
+                </div>
+                <div class="apd-item">
+                    <img src="img/helm-karyawan.png" alt="Karyawan Petrokimia Gresik">
+                    <p>Karyawan Petrokimia Gresik</p>
+                </div>
+                <div class="apd-item">
+                    <img src="img/helm-kontraktor.png" alt="Kontraktor / Mahasiswa">
+                    <p>Kontraktor / Mahasiswa</p>
+                </div>
+                <div class="apd-item">
+                    <img src="img/helm-tamu.png" alt="Tamu">
+                    <p>Tamu</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="apd-section">
+            <h3 class="apd-section-title masker">Masker Gas</h3>
+            <div class="apd-grid">
+                <div class="apd-item">
+                    <img src="img/mask-half.png" alt="Half Face Mask">
+                    <p>Half Face Mask</p>
+                </div>
+                <div class="apd-item">
+                    <img src="img/mask-full.png" alt="Full Face Mask">
+                    <p>Full Face Mask</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="apd-section">
+            <h3 class="apd-section-title sepatu">Sepatu Safety</h3>
+            <div class="apd-grid">
+                <div class="apd-item">
+                    <img src="img/sepatu-safety.png" alt="Sepatu Safety">
+                    <p>Sepatu Safety</p>
+                </div>
+                <div class="apd-item">
+                    <img src="img/sepatu-karet.png" alt="Sepatu Karet">
+                    <p>Sepatu Karet</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="apd-section">
+            <h3 class="apd-section-title seragam">Seragam Kerja</h3>
+            <div class="apd-grid">
+                <div class="apd-item">
+                    <img src="img/seragam-kontraktor1.png" alt="Kontraktor >6 bulan">
+                    <p>Kontraktor (Masa kerja >6 bulan)</p>
+                </div>
+                <div class="apd-item">
+                    <img src="img/seragam-admin.png" alt="Kontraktor Admin">
+                    <p>Kontraktor (Bagian Administrasi)</p>
+                </div>
+                <div class="apd-item">
+                    <img src="img/seragam-kontraktor2.png" alt="Kontraktor <6 bulan">
+                    <p>Kontraktor (Masa kerja <6 bulan)</p>
+                </div>
+                <div class="apd-item">
+                    <img src="img/seragam-safety.png" alt="Safety Officer">
+                    <p>Safety Officer / Safety Man</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>KRITERIA ALAT PELINDUNG DIRI (APD)</h1>
+            <p class="subtitle">Setiap pekerjaan memiliki risiko berbeda. Kenali APD yang tepat untuk melindungi diri
+                Anda sesuai dengan jenis pekerjaan.</p>
+        </header>
+
+        <section class="apd-criteria">
+            <div class="criteria-card construction">
+                <!-- Gambar di kiri -->
+                <div class="criteria-image">
+                    <img src="img/karyawan.png" alt="Pekerja Konstruksi dengan APD lengkap" class="worker-image">
+                </div>
+
+                <!-- Penjelasan di kanan -->
+                <div class="apd-items">
+                    <ul class="apd-list">
+                        <li class="apd-item">
+                            <div class="apd-icon">
+                                <img src="img/safety-helmet.png" alt="Safety Helmet">
+                            </div>
+                            <div class="apd-content">
+                                <div class="apd-name">Safety Helmet (Helm Pengaman)</div>
+                                <div class="apd-description">
+                                    Melindungi kepala dari benturan benda jatuh atau terbentur struktur bangunan. Helm
+                                    safety harus memenuhi standar SNI dan dipastikan kondisi baik tanpa retak.
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="apd-item">
+                            <div class="apd-icon">
+                                <img src="img/safety-shoes.png" alt="Safety Shoes">
+                            </div>
+                            <div class="apd-content">
+                                <div class="apd-name">Safety Shoes (Sepatu Safety)</div>
+                                <div class="apd-description">
+                                    Melindungi kaki dari tertimpa benda berat, tertusuk paku, atau terpeleset.
+                                    Dilengkapi dengan steel toe cap untuk perlindungan maksimal.
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="apd-item">
+                            <div class="apd-icon">
+                                <img src="img/dust-mask.jpeg" alt="Dusk Mask">
+                            </div>
+                            <div class="apd-content">
+                                <div class="apd-name">Dusk Mask (Masker Debu)</div>
+                                <div class="apd-description">
+                                    Melindungi pernapasan dari debu, partikel, dan polutan di area konstruksi. Masker
+                                    harus sesuai dengan tingkat paparan dan diganti secara berkala.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Karyawan 2 -->
+            <div class="criteria-card medical">
+                <div class="criteria-image">
+                    <div class="image-container">
+                        <img src="img/karyawan2.png" alt="karyawan2" class="worker-image">
+                    </div>
+                </div>
+                <div class="apd-items">
+                    <ul class="apd-list">
+                        <li class="apd-item">
+                            <div class="apd-icon">
+                                <img src="img/safety-helmet.png" alt="Safety Helmet">
+                            </div>
+                            <div class="apd-content">
+                                <div class="apd-name">Safety Helmet</div>
+                                <div class="apd-description">
+                                    Melindungi kepala dari benturan dan jatuhan benda keras saat bekerja di area
+                                    berisiko.
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="apd-item">
+                            <div class="apd-icon">
+                                <img src="img/face-shield.png" alt="Katelpak">
+                            </div>
+                            <div class="apd-content">
+                                <div class="apd-name">Katelpak</div>
+                                <div class="apd-description">
+                                    Melindungi mata, hidung, dan mulut dari percikan cairan tubuh pasien. Digunakan
+                                    bersama masker untuk perlindungan maksimal.
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="apd-item">
+                            <div class="apd-icon">
+                                <img src="img/long-sleeve.png" alt="Long Sleeve">
+                            </div>
+                            <div class="apd-content">
+                                <div class="apd-name">Long Sleeve</div>
+                                <div class="apd-description">
+                                    Mencegah kontak langsung dengan darah, cairan tubuh, atau bahan infeksius. Harus
+                                    diganti setelah setiap penggunaan atau ketika terkontaminasi.
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="apd-item">
+                            <div class="apd-icon">
+                                <img src="img/earing-protection.jpeg" alt="Earing Protection">
+                            </div>
+                            <div class="apd-content">
+                                <div class="apd-name">Earing Protection</div>
+                                <div class="apd-description">
+                                    Melindungi telinga dari kebisingan berlebihan di area kerja industri.
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="apd-item">
+                            <div class="apd-icon">
+                                <img src="img/dust-mask.jpeg" alt="Dust Mask">
+                            </div>
+                            <div class="apd-content">
+                                <div class="apd-name">Dust Mask</div>
+                                <div class="apd-description">
+                                    Melindungi pernapasan dari partikel debu, asap, dan bahan kimia ringan di udara.
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="apd-item">
+                            <div class="apd-icon">
+                                <img src="img/safety-gloves.jpeg" alt="Safety Gloves">
+                            </div>
+                            <div class="apd-content">
+                                <div class="apd-name">Safety Gloves</div>
+                                <div class="apd-description">
+                                    Melindungi tangan dari bahan kimia, panas, atau luka saat bekerja dengan alat tajam.
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="apd-item">
+                            <div class="apd-icon">
+                                <img src="img/reflector.jpg" alt="Reflector">
+                            </div>
+                            <div class="apd-content">
+                                <div class="apd-name">Reflector</div>
+                                <div class="apd-description">
+                                    Memantulkan cahaya agar pekerja mudah terlihat di area gelap atau saat malam hari.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- JavaScript Libraries -->
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/wow/wow.min.js"></script>
+            <script src="lib/easing/easing.min.js"></script>
+            <script src="lib/waypoints/waypoints.min.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+            <script src="lib/counterup/counterup.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+            <!-- Template Javascript -->
+            <script src="js/main.js"></script>
+
+</body>
+
+</html>
