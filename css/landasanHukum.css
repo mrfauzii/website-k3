@@ -102,3 +102,51 @@ color: white;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* ===== SMK3 Section ===== */
+.smk3-section {
+    background-color: #fff6e9;
+    border-top: 3px solid #ff9800;
+}
+
+.smk3-section h2 {
+    color: #ff9800 !important;
+}
+
+.smk3-section p.text-muted {
+    color: #6d4c41;
+}
+
+.smk3-box {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.15);
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-top: 4px solid transparent;
+}
+
+.smk3-box:hover {
+    transform: translateY(-6px);
+    border-top: 4px solid #ff9800;
+    box-shadow: 0 6px 18px rgba(255, 152, 0, 0.3);
+    background: linear-gradient(180deg, #fffdf8, #fff6e9);
+}
+
+.smk3-box i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #ff9800 !important;
+    transition: color 0.3s ease;
+}
+
+.smk3-box:hover i {
+    color: #e65100;
+}
+
+.smk3-box p {
+    font-size: 15px;
+    color: #5d4037;
+    line-height: 1.6;
+}
