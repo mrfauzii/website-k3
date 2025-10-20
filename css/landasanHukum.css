@@ -150,3 +150,52 @@ color: white;
     color: #5d4037;
     line-height: 1.6;
 }
+
+/* ===== Program Kerja Section ===== */
+.program-kerja-section {
+    background-color: #fff9f4;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.program-kerja-section h2 {
+    color: #ff7b00;
+    border-bottom: 3px solid #0077b6;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.program-item {
+    background: linear-gradient(145deg, #ff944d, #ff7b00);
+    color: white;
+    border-radius: 16px;
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 6px 14px rgba(255, 123, 0, 0.3);
+    border: 2px solid #ffe2c4;
+}
+
+.program-icon {
+    background-color: #ffffff25;
+    color: #fff;
+    font-size: 28px;
+    padding: 12px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.program-item p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 500;
+}
