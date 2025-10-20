@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Keselamatan Kerja K3</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/keselamatan.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
+        <a href="index.html" class="navbar-brand ps-5 me-0">
+            <h1 class="text-white m-0">K3 Perusahaan</h1>
+        </a>
+
+        <!-- Tombol Back hanya ikon panah -->
+        <a href="index.html"
+            class="btn btn-primary ms-auto rounded-circle d-flex align-items-center justify-content-center"
+            style="width: 45px; height: 45px;">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white animated slideInRight">Keselamatan Kerja</h1>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Faktor Keselamatan Section -->
+    <section class="faktor-section py-5">
+        <div class="container">
+            <h2 class="main-section-title text-center mb-5">
+                <i class="bi bi-shield-check"></i> Faktor-faktor yang Berpengaruh Terhadap Keselamatan Kerja
+            </h2>
+
+            <div class="row g-4">
+                <!-- Faktor Manusia -->
+                <div class="col-lg-4">
+                    <div class="faktor-card human-factor">
+                        <div class="faktor-icon">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <h3>Faktor Manusia</h3>
+                        <p class="subtitle">Human Factor</p>
+                        <ul>
+                            <li>Kurangnya pengetahuan dan keterampilan</li>
+                            <li>Kelelahan karena jam kerja panjang</li>
+                            <li>Sikap dan perilaku tidak aman</li>
+                            <li>Kondisi fisik dan mental (stres)</li>
+                            <li>Kurangnya pelatihan memadai</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Faktor Lingkungan -->
+                <div class="col-lg-4">
+                    <div class="faktor-card environment-factor">
+                        <div class="faktor-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h3>Faktor Lingkungan Kerja</h3>
+                        <p class="subtitle">Environmental Factor</p>
+                        <ul>
+                            <li>Tata letak (layout) pabrik tidak teratur</li>
+                            <li>Pencahayaan yang kurang</li>
+                            <li>Suhu ekstrem di area kerja</li>
+                            <li>Kebisingan tinggi dari mesin</li>
+                            <li>Ventilasi buruk dan lantai licin</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Faktor Peralatan -->
+                <div class="col-lg-4">
+                    <div class="faktor-card equipment-factor">
+                        <div class="faktor-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h3>Faktor Peralatan & Material</h3>
+                        <p class="subtitle">Equipment & Material Factor</p>
+                        <ul>
+                            <li>Mesin tanpa pelindung keamanan</li>
+                            <li>Kerusakan peralatan tidak terawat</li>
+                            <li>Bahan kimia berbahaya (mudah terbakar, beracun)</li>
+                            <li>Desain peralatan tidak ergonomis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sumber Bahaya Section -->
+    <section class="bahaya-section py-5">
+        <div class="container">
+            <h2 class="main-section-title text-center mb-5">
+                <i class="bi bi-exclamation-triangle-fill"></i> Sumber Bahaya yang Berpotensi Menimbulkan Kecelakaan
+                Kerja
+            </h2>
+
+            <!-- Bahaya Fisik -->
+            <div class="bahaya-category mb-5">
+                <div class="category-header fisik">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                    <h3>1. Bahaya Fisik (Physical Hazards)</h3>
+                </div>
+                <div class="bahaya-grid">
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-volume-up-fill"></i> Suara Bising</h5>
+                        <p><strong>Sumber:</strong> Turbin, kompresor, pompa, blower, pelepasan uap bertekanan tinggi.
+                        </p>
+                        <p><strong>Risiko:</strong> Gangguan pendengaran permanen, stres, kesulitan komunikasi.</p>
+                    </div>
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-thermometer-high"></i> Suhu Ekstrem</h5>
+                        <p><strong>Sumber:</strong> Reaktor, boiler, furnace, flare stack, perpipaan uap panas,
+                            kebocoran cairan kriogenik.</p>
+                        <p><strong>Risiko:</strong> Heat stroke, dehidrasi, frostbite.</p>
+                    </div>
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-speedometer2"></i> Tekanan Tinggi</h5>
+                        <p><strong>Sumber:</strong> Bejana tekan, reaktor, kolom distilasi, boiler, jalur perpipaan.</p>
+                        <p><strong>Risiko:</strong> Ledakan katastropik yang melepaskan energi besar.</p>
+                    </div>
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-phone-vibrate"></i> Getaran</h5>
+                        <p><strong>Sumber:</strong> Mesin berputar (pompa, kompresor), kendaraan berat (forklift, truk).
+                        </p>
+                        <p><strong>Risiko:</strong> Hand-Arm Vibration Syndrome (HAVS), gangguan muskuloskeletal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bahaya Kimia -->
+            <div class="bahaya-category mb-5">
+                <div class="category-header kimia">
+                    <i class="bi bi-radioactive"></i>
+                    <h3>2. Bahaya Kimia (Chemical Hazards)</h3>
+                </div>
+                <div class="bahaya-grid">
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-cloud-fill"></i> Gas Berbahaya</h5>
+                        <p><strong>Contoh:</strong> Amoniak (NH₃) sangat beracun dan iritan, Gas Alam (CH₄) mudah
+                            terbakar dan meledak.</p>
+                        <p><strong>Risiko:</strong> Iritasi pernapasan, mata, kulit; dapat fatal pada konsentrasi
+                            tinggi.</p>
+                    </div>
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-droplet-fill"></i> Asam Korosif</h5>
+                        <p><strong>Contoh:</strong> Asam Sulfat (H₂SO₄), Asam Fosfat (H₃PO₄).</p>
+                        <p><strong>Risiko:</strong> Luka bakar kimia parah pada kontak langsung.</p>
+                    </div>
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-tornado"></i> Debu Kimia</h5>
+                        <p><strong>Sumber:</strong> Debu pupuk (Urea, ZA) di area pengantongan dan gudang.</p>
+                        <p><strong>Risiko:</strong> Gangguan pernapasan jika terhirup dalam jangka panjang.</p>
+                    </div>
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-fire"></i> Mudah Terbakar</h5>
+                        <p><strong>Sumber:</strong> Kebocoran Gas Alam dapat membentuk awan gas yang mudah meledak.</p>
+                        <p><strong>Risiko:</strong> Ledakan jika bertemu sumber api (percikan, pengelasan, rokok).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bahaya Biologi -->
+            <div class="bahaya-category mb-5">
+                <div class="category-header biologi">
+                    <i class="bi bi-bug-fill"></i>
+                    <h3>3. Bahaya Biologi (Biological Hazards)</h3>
+                </div>
+                <div class="bahaya-grid">
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-virus"></i> Bakteri & Virus</h5>
+                        <p>Penyebaran penyakit menular di kantin, ruang ganti, atau ruang kontrol.</p>
+                    </div>
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-moisture"></i> Jamur & Mold</h5>
+                        <p>Pertumbuhan jamur di area lembab seperti menara pendingin atau gudang.</p>
+                    </div>
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-bug"></i> Serangga & Hama</h5>
+                        <p>Nyamuk (demam berdarah), ular, atau serangga di area terbuka dan tumpukan material.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bahaya Ergonomi -->
+            <div class="bahaya-category mb-5">
+                <div class="category-header ergonomi">
+                    <i class="bi bi-person-arms-up"></i>
+                    <h3>4. Bahaya Ergonomi (Ergonomic Hazards)</h3>
+                </div>
+                <div class="bahaya-grid">
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-box-seam"></i> Beban Berat</h5>
+                        <p>Mengangkat karung pupuk di gudang, peralatan maintenance berat.</p>
+                    </div>
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-person-standing"></i> Postur Tidak Alamiah</h5>
+                        <p>Membungkuk, berjongkok lama saat perbaikan mesin, menjangkau katup besar.</p>
+                    </div>
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-display"></i> Desain Stasiun Kerja</h5>
+                        <p>Operator ruang kontrol duduk lama memantau monitor, risiko gangguan leher dan punggung.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bahaya Psikososial -->
+            <div class="bahaya-category">
+                <div class="category-header psikososial">
+                    <i class="bi bi-heart-pulse-fill"></i>
+                    <h3>5. Bahaya Psikososial (Psychosocial Hazards)</h3>
+                </div>
+                <div class="bahaya-grid">
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-graph-up-arrow"></i> Stres Kerja</h5>
+                        <p>Tanggung jawab tinggi operator ruang kontrol, tekanan saat start-up, shutdown, atau
+                            Turn-Around Maintenance.</p>
+                    </div>
+                    <div class="bahaya-item">
+                        <h5><i class="bi bi-shield-exclamation"></i> Lingkungan Berisiko</h5>
+                        <p>Kesadaran konstan akan bahaya ledakan, kebakaran, atau paparan kimia menimbulkan kecemasan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pencegahan Section -->
+    <section class="pencegahan-section py-5">
+        <div class="container">
+            <h2 class="main-section-title text-center mb-5">
+                <i class="bi bi-shield-fill-check"></i> Cara Pencegahan Kecelakaan Kerja
+            </h2>
+
+            <div class="pencegahan-container">
+                <div class="pencegahan-card">
+                    <div class="pencegahan-number">1</div>
+                    <div class="pencegahan-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                    <h4>Penerapan Sistem Manajemen K3 (SMK3)</h4>
+                    <p>PT Petrokimia Gresik mengimplementasikan SMK3 untuk mencapai "Safety, Health, Environmental (SHE)
+                        Excellence" yang mendukung "Operation Excellent".</p>
+                    <div class="pencegahan-detail">
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span><strong>Identifikasi bahaya</strong> - Menentukan potensi bahaya di setiap unit
+                                kerja</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span><strong>Penilaian risiko</strong> - Menganalisis tingkat risiko dari setiap
+                                bahaya</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span><strong>Pengendalian risiko</strong> - Menerapkan langkah pencegahan untuk mengurangi
+                                risiko</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span><strong>Evaluasi</strong> - Memastikan sistem K3 selalu diperbarui</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pencegahan-card">
+                    <div class="pencegahan-number">2</div>
+                    <div class="pencegahan-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                    <h4>Pelatihan dan Peningkatan Kompetensi</h4>
+                    <p>Pelatihan rutin bagi seluruh karyawan untuk meningkatkan kesadaran dan keterampilan dalam
+                        menerapkan prosedur K3.</p>
+                    <div class="pencegahan-detail">
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Penggunaan Alat Pelindung Diri (APD)</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Prosedur darurat dan simulasi evakuasi</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Workshop keselamatan kerja</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Evaluasi berkala untuk memastikan pemahaman</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pencegahan-card">
+                    <div class="pencegahan-number">3</div>
+                    <div class="pencegahan-icon"><i class="bi bi-search"></i></div>
+                    <h4>Pengawasan dan Inspeksi Rutin</h4>
+                    <p>Pengawasan berkala untuk memastikan kepatuhan standar K3 melalui metode Safety Patrol di seluruh
+                        area produksi.</p>
+                    <div class="pencegahan-detail">
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pemeriksaan mesin dan peralatan</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Kondisi APD dan identifikasi bahaya</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Deteksi kebocoran bahan kimia</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Perbaikan prosedur kerja dan pencegahan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pencegahan-card">
+                    <div class="pencegahan-number">4</div>
+                    <div class="pencegahan-icon"><i class="bi bi-tree-fill"></i></div>
+                    <h4>Pengendalian Aspek Lingkungan</h4>
+                    <p>Pengendalian sebagai bagian dari sistem manajemen terintegrasi untuk menjaga lingkungan kerja
+                        yang aman.</p>
+                    <div class="pencegahan-detail">
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pengelolaan limbah dan pengurangan emisi GRK</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Efisiensi penggunaan air dan limbah B3</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Prinsip 3R (Reduce, Reuse, Recycle)</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Perlindungan keanekaragaman hayati</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pencegahan-card">
+                    <div class="pencegahan-number">5</div>
+                    <div class="pencegahan-icon"><i class="bi bi-file-earmark-text-fill"></i></div>
+                    <h4>Dokumentasi dan Pelaporan</h4>
+                    <p>Setiap insiden dicatat dan dianalisis untuk mengetahui penyebab dan menentukan tindakan
+                        pencegahan yang diperlukan.</p>
+                    <div class="pencegahan-detail">
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pencatatan dan analisis setiap insiden</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Evaluasi K3 dan perbaikan prosedur</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Pelaporan kepada instansi terkait</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
