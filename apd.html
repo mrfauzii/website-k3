@@ -33,9 +33,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-     <style>
+    <style>
         /* style.css - Style minimalis untuk konten APD */
-        .container {
+        .apd-page .container {
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -43,27 +43,33 @@
         .apd-criteria {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 25px;
         }
 
         .criteria-card {
             display: flex;
             background: white;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
             border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .criteria-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
         }
 
         .criteria-image {
-            flex: 0.7;
-            min-height: 500px;
+            flex: 0.6;
+            min-height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: #f8f9fa;
             border-right: 1px solid #e0e0e0;
-            padding: 30px;
+            padding: 25px;
         }
 
         .image-container {
@@ -73,35 +79,44 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            text-align: center;
         }
 
         /* Semua gambar pekerja */
         .worker-image,
         .main-worker-image {
-            width: 400px;
-            /* lebar tetap */
-            height: 400px;
-            /* tinggi tetap agar seragam */
+            width: 280px;
+            height: 280px;
             object-fit: cover;
-            /* isi penuh kotak tapi tetap proporsional */
-            border-radius: 10px;
+            border-radius: 8px;
             border: 2px solid #e0e0e0;
             background-color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .image-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+            margin-top: 10px;
+            line-height: 1.4;
+            max-width: 300px;
         }
 
         .apd-items {
             flex: 1;
-            padding: 35px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         .job-title {
-            font-size: 2rem;
+            font-size: 1.6rem;
             color: #2c3e50;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
             border-bottom: 2px solid #3498db;
             text-align: center;
             font-weight: 600;
@@ -109,35 +124,42 @@
 
         .apd-list {
             list-style-type: none;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+            padding: 0;
         }
 
         .apd-item {
-            padding: 20px;
-            margin-bottom: 15px;
+            padding: 15px;
+            margin-bottom: 12px;
             background: #f8f9fa;
-            border-radius: 10px;
+            border-radius: 8px;
             border-left: 4px solid #3498db;
             display: flex;
             align-items: flex-start;
-            gap: 20px;
+            gap: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .apd-item:hover {
+            background: #e9ecef;
         }
 
         .apd-icon {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             flex-shrink: 0;
-            border-radius: 8px;
+            border-radius: 6px;
             background: white;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 2px solid #e0e0e0;
+            padding: 5px;
         }
 
         .apd-icon img {
-            width: 80%;
-            height: 80%;
+            width: 100%;
+            height: 100%;
             object-fit: contain;
         }
 
@@ -147,31 +169,42 @@
 
         .apd-name {
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #2c3e50;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: block;
         }
 
         .apd-description {
             color: #555;
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 0.9rem;
+            line-height: 1.5;
             margin: 0;
+        }
+
+        .apd-usage {
+            color: #666;
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-top: 5px;
+            padding: 8px 12px;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 4px;
+            border-left: 3px solid #3498db;
         }
 
         .safety-note {
             background: #e74c3c;
             color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
             border-left: 4px solid #c0392b;
         }
 
         .safety-note div {
-            font-size: 1rem;
-            line-height: 1.5;
+            font-size: 0.9rem;
+            line-height: 1.4;
             text-align: center;
         }
 
@@ -184,12 +217,22 @@
             border-left-color: #e67e22;
         }
 
+        .construction .apd-usage {
+            background: rgba(230, 126, 34, 0.1);
+            border-left-color: #e67e22;
+        }
+
         /* Warna untuk kategori medis */
         .medical .job-title {
             border-bottom-color: #3498db;
         }
 
         .medical .apd-item {
+            border-left-color: #3498db;
+        }
+
+        .medical .apd-usage {
+            background: rgba(52, 152, 219, 0.1);
             border-left-color: #3498db;
         }
 
@@ -202,12 +245,9 @@
             border-left-color: #9b59b6;
         }
 
-        .image-caption {
-            text-align: center;
-            font-size: 1rem;
-            color: #666;
-            font-weight: 500;
-            margin-top: 10px;
+        .factory .apd-usage {
+            background: rgba(155, 89, 182, 0.1);
+            border-left-color: #9b59b6;
         }
 
         /* Responsif */
@@ -217,90 +257,141 @@
             }
 
             .criteria-image {
-                min-height: 300px;
+                min-height: 250px;
                 border-right: none;
                 border-bottom: 1px solid #e0e0e0;
-                padding: 25px;
+                padding: 20px;
             }
 
+            .worker-image,
             .main-worker-image {
-                max-width: 350px;
+                width: 220px;
+                height: 220px;
+                max-width: 100%;
             }
 
             .apd-items {
-                padding: 30px;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .apd-criteria {
+                gap: 20px;
+            }
+
+            .criteria-image {
+                min-height: 200px;
+                padding: 15px;
+            }
+
+            .worker-image,
+            .main-worker-image {
+                width: 180px;
+                height: 180px;
+            }
+
+            .job-title {
+                font-size: 1.4rem;
+                margin-bottom: 15px;
+            }
+
+            .apd-item {
+                padding: 12px;
+                gap: 12px;
+            }
+
+            .apd-icon {
+                width: 45px;
+                height: 45px;
             }
         }
 
         @media (max-width: 576px) {
             .apd-items {
-                padding: 20px;
+                padding: 15px;
             }
 
             .job-title {
-                font-size: 1.6rem;
-                margin-bottom: 20px;
+                font-size: 1.3rem;
+                margin-bottom: 15px;
             }
 
             .apd-item {
                 flex-direction: column;
                 text-align: center;
-                gap: 15px;
-                padding: 15px;
+                gap: 10px;
+                padding: 12px;
             }
 
             .apd-icon {
-                width: 70px;
-                height: 70px;
+                width: 50px;
+                height: 50px;
                 align-self: center;
             }
 
             .criteria-image {
-                min-height: 250px;
-                padding: 20px;
+                min-height: 180px;
+                padding: 15px;
             }
 
+            .worker-image,
             .main-worker-image {
-                max-width: 280px;
+                width: 150px;
+                height: 150px;
+                max-width: 100%;
             }
 
             .safety-note {
-                padding: 15px;
+                padding: 12px;
+            }
+
+            .apd-name {
+                font-size: 0.95rem;
+            }
+
+            .apd-description {
+                font-size: 0.85rem;
+            }
+
+            .apd-usage {
+                font-size: 0.8rem;
+                padding: 6px 10px;
             }
         }
 
         /* =========================================== */
-        /* STYLE BARU UNTUK APD OVERVIEW - TANPA MENGUBAH STYLE SEBELUMNYA */
+        /* STYLE BARU UNTUK APD OVERVIEW - VERSI LEBIH KECIL */
         /* =========================================== */
 
         .apd-overview {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 30px auto;
             padding: 0 20px;
         }
 
         .apd-title {
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             color: #2c3e50;
-            margin-bottom: 40px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #3498db;
+            margin-bottom: 30px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #3498db;
             font-weight: 600;
         }
 
         .apd-section {
-            margin-bottom: 50px;
+            margin-bottom: 35px;
             background: white;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
             border: 1px solid #e0e0e0;
         }
 
         .apd-section-title {
-            font-size: 1.8rem;
-            padding: 20px 30px;
+            font-size: 1.4rem;
+            padding: 15px 25px;
             margin: 0;
             color: white;
             font-weight: 600;
@@ -324,15 +415,15 @@
 
         .apd-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
-            padding: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            padding: 25px;
         }
 
         .apd-overview .apd-item {
             background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 8px;
+            padding: 15px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid #e0e0e0;
@@ -344,18 +435,18 @@
         }
 
         .apd-overview .apd-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .apd-overview .apd-item img {
-            width: 120px;
-            height: 120px;
+            width: 80px;
+            height: 80px;
             object-fit: contain;
-            margin-bottom: 15px;
-            border-radius: 8px;
+            margin-bottom: 12px;
+            border-radius: 6px;
             background: white;
-            padding: 10px;
+            padding: 8px;
             border: 1px solid #e0e0e0;
         }
 
@@ -363,48 +454,167 @@
             margin: 0;
             font-weight: 600;
             color: #2c3e50;
-            font-size: 1rem;
-            line-height: 1.4;
+            font-size: 0.9rem;
+            line-height: 1.3;
+        }
+
+        .apd-item-description {
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 8px;
+            line-height: 1.3;
+            font-style: italic;
         }
 
         /* Responsif untuk APD Overview */
         @media (max-width: 768px) {
+            .apd-overview {
+                margin: 25px auto;
+                padding: 0 15px;
+            }
+
+            .apd-title {
+                font-size: 1.6rem;
+                margin-bottom: 25px;
+            }
+
             .apd-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                gap: 20px;
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
                 padding: 20px;
             }
-            
+
             .apd-overview .apd-item img {
-                width: 100px;
-                height: 100px;
+                width: 70px;
+                height: 70px;
+            }
+
+            .apd-section-title {
+                font-size: 1.3rem;
+                padding: 12px 20px;
             }
         }
 
         @media (max-width: 576px) {
+            .apd-overview {
+                margin: 20px auto;
+                padding: 0 10px;
+            }
+
+            .apd-title {
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+            }
+
             .apd-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+                gap: 12px;
                 padding: 15px;
             }
-            
+
             .apd-overview .apd-item {
-                padding: 15px;
+                padding: 12px;
             }
-            
+
             .apd-overview .apd-item img {
-                width: 80px;
-                height: 80px;
+                width: 60px;
+                height: 60px;
+                padding: 6px;
             }
-            
-            .apd-title {
-                font-size: 1.8rem;
+
+            .apd-overview .apd-item p {
+                font-size: 0.85rem;
             }
-            
+
+            .apd-item-description {
+                font-size: 0.75rem;
+            }
+
             .apd-section-title {
-                font-size: 1.5rem;
-                padding: 15px 20px;
+                font-size: 1.2rem;
+                padding: 10px 15px;
             }
+        }
+
+        @media (max-width: 400px) {
+            .apd-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding: 12px;
+            }
+
+            .apd-overview .apd-item {
+                padding: 10px 8px;
+            }
+
+            .apd-overview .apd-item img {
+                width: 50px;
+                height: 50px;
+                padding: 5px;
+            }
+
+            .apd-overview .apd-item p {
+                font-size: 0.8rem;
+            }
+
+            .apd-item-description {
+                font-size: 0.7rem;
+            }
+        }
+
+        .apd-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .apd-section {
+            flex: 1 1 48%;
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .apd-section-title {
+            text-align: center;
+            color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Warna berbeda untuk tiap header */
+        .apd-section-title.masker {
+            background-color: #2c3e50;
+            /* biru tua */
+        }
+
+        .apd-section-title.sepatu {
+            background-color: #16a085;
+            /* hijau toska */
+        }
+
+        .apd-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .apd-item img {
+            width: 100%;
+            border-radius: 8px;
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .apd-item p {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -420,7 +630,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
         <a href="index.html" class="navbar-brand ps-5 me-0">
-            <h1 class="text-white m-0">Industro</h1>
+            <h1 class="text-white m-0">K3 Perusahaan</h1>
         </a>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -438,7 +648,7 @@
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <h6 class="text-white animated slideInRight fw-bold" style="font-size: 28px;">
-                Pertolongan Pertama (P3K)
+                Alat Pelidung Diri (APD)
             </h6>
         </div>
     </div>
@@ -451,52 +661,92 @@
             <h3 class="apd-section-title helm">Helm Safety</h3>
             <div class="apd-grid">
                 <div class="apd-item">
-                    <img src="img/helm-pemadam.png" alt="Pemadam Kebakaran">
+                    <img src="img/safety-helmet1.jpg" alt="Pemadam Kebakaran">
                     <p>Pemadam Kebakaran</p>
                 </div>
                 <div class="apd-item">
-                    <img src="img/helm-safety-officer.png" alt="Safety Officer">
+                    <img src="img/safety-helmet2.jpeg" alt="Safety Officer">
                     <p>Safety Officer</p>
                 </div>
                 <div class="apd-item">
-                    <img src="img/helm-karyawan.png" alt="Karyawan Petrokimia Gresik">
-                    <p>Karyawan Petrokimia Gresik</p>
+                    <img src="img/safety-helmet3.jpg" alt="Karyawan Petrokimia Gresik">
+                    <p>Karyawan</p>
                 </div>
                 <div class="apd-item">
-                    <img src="img/helm-kontraktor.png" alt="Kontraktor / Mahasiswa">
+                    <img src="img/safety-helmet.png" alt="Kontraktor / Mahasiswa">
                     <p>Kontraktor / Mahasiswa</p>
                 </div>
                 <div class="apd-item">
-                    <img src="img/helm-tamu.png" alt="Tamu">
+                    <img src="img/safety-helmet4.jpg" alt="Tamu">
                     <p>Tamu</p>
                 </div>
             </div>
-        </div>
-
-        <div class="apd-section">
-            <h3 class="apd-section-title masker">Masker Gas</h3>
-            <div class="apd-grid">
-                <div class="apd-item">
-                    <img src="img/mask-half.png" alt="Half Face Mask">
-                    <p>Half Face Mask</p>
-                </div>
-                <div class="apd-item">
-                    <img src="img/mask-full.png" alt="Full Face Mask">
-                    <p>Full Face Mask</p>
-                </div>
+            <div>
+                <p><strong>Helm Safety (Helm Keselamatan)</strong> digunakan untuk:</p>
+                <ul>
+                    <li>Melindungi kepala dari benturan benda jatuh di area kerja</li>
+                    <li>Mencegah cedera kepala akibat terbentur struktur bangunan atau peralatan</li>
+                    <li>Melindungi dari sengatan listrik (helm non-konduktif)</li>
+                    <li>Mengidentifikasi peran pekerja berdasarkan warna helm</li>
+                    <li>Melindungi dari percikan api, bahan kimia, atau suhu ekstrem</li>
+                </ul>
+                <p>Helm safety wajib digunakan di semua area kerja yang memiliki risiko cedera kepala, seperti
+                    konstruksi, pabrik, gudang, dan area produksi.</p>
             </div>
         </div>
 
-        <div class="apd-section">
-            <h3 class="apd-section-title sepatu">Sepatu Safety</h3>
-            <div class="apd-grid">
-                <div class="apd-item">
-                    <img src="img/sepatu-safety.png" alt="Sepatu Safety">
-                    <p>Sepatu Safety</p>
+        <div class="apd-row">
+            <!-- Bagian Masker -->
+            <div class="apd-section">
+                <h3 class="apd-section-title masker">Masker Gas</h3>
+                <div class="apd-grid">
+                    <div class="apd-item">
+                        <img src="img/safety-musk1.jpeg" alt="Half Face Mask">
+                        <p>Half Face Mask</p>
+                    </div>
+                    <div class="apd-item">
+                        <img src="img/safety-musk2.jpeg" alt="Full Face Mask">
+                        <p>Full Face Mask</p>
+                    </div>
                 </div>
-                <div class="apd-item">
-                    <img src="img/sepatu-karet.png" alt="Sepatu Karet">
-                    <p>Sepatu Karet</p>
+                <div>
+                    <p><strong>Masker Gas</strong> digunakan untuk:</p>
+                    <ul>
+                        <li>Melindungi sistem pernapasan dari gas beracun dan berbahaya</li>
+                        <li>Mencegah inhalasi uap kimia yang dapat merusak paru-paru</li>
+                        <li>Melindungi dari partikel debu, kabut, dan uap logam</li>
+                        <li>Menyaring udara dari kontaminan di lingkungan kerja berbahaya</li>
+                        <li>Melindungi dari bahan kimia dengan konsentrasi tertentu</li>
+                    </ul>
+                    <p>Masker gas wajib digunakan di area dengan risiko paparan gas berbahaya, bahan kimia, atau udara
+                        terkontaminasi.</p>
+                </div>
+            </div>
+
+            <!-- Bagian Sepatu -->
+            <div class="apd-section">
+                <h3 class="apd-section-title sepatu">Sepatu Safety</h3>
+                <div class="apd-grid">
+                    <div class="apd-item">
+                        <img src="img/sepatu1.png" alt="Sepatu Safety">
+                        <p>Sepatu Safety</p>
+                    </div>
+                    <div class="apd-item">
+                        <img src="img/sepatu2.jpeg" alt="Sepatu Karet">
+                        <p>Sepatu Karet</p>
+                    </div>
+                </div>
+                <div>
+                    <p><strong>Sepatu Safety (Safety Shoes)</strong> digunakan untuk:</p>
+                    <ul>
+                        <li>Melindungi kaki dari tertimpa benda berat</li>
+                        <li>Mencegah tusukan dari paku, pecahan kaca, atau benda tajam</li>
+                        <li>Melindungi dari bahaya slip/terpeleset di permukaan licin</li>
+                        <li>Melindungi dari sengatan listrik (sepatu safety non-konduktif)</li>
+                        <li>Melindungi dari percikan api, logam panas, atau bahan kimia</li>
+                    </ul>
+                    <p>Sepatu safety wajib digunakan di area kerja dengan risiko cedera kaki seperti konstruksi, pabrik,
+                        gudang, dan workshop.</p>
                 </div>
             </div>
         </div>
@@ -505,20 +755,134 @@
             <h3 class="apd-section-title seragam">Seragam Kerja</h3>
             <div class="apd-grid">
                 <div class="apd-item">
-                    <img src="img/seragam-kontraktor1.png" alt="Kontraktor >6 bulan">
+                    <img src="img/karyawan1.jpg" alt="Kontraktor >6 bulan">
                     <p>Kontraktor (Masa kerja >6 bulan)</p>
                 </div>
                 <div class="apd-item">
-                    <img src="img/seragam-admin.png" alt="Kontraktor Admin">
+                    <img src="img/karyawan2.png" alt="Kontraktor Admin">
                     <p>Kontraktor (Bagian Administrasi)</p>
                 </div>
                 <div class="apd-item">
-                    <img src="img/seragam-kontraktor2.png" alt="Kontraktor <6 bulan">
+                    <img src="img/karyawan3.jpg" alt="Kontraktor <6 bulan">
                     <p>Kontraktor (Masa kerja <6 bulan)</p>
                 </div>
                 <div class="apd-item">
-                    <img src="img/seragam-safety.png" alt="Safety Officer">
+                    <img src="img/karyawan4.jpg" alt="Safety Officer">
                     <p>Safety Officer / Safety Man</p>
+                </div>
+            </div>
+            <div>
+                <p><strong>Seragam Kerja</strong> digunakan untuk:</p>
+                <ul>
+                    <li>Memberikan perlindungan dasar terhadap paparan panas, percikan bahan kimia ringan, dan bahaya
+                        mekanis.</li>
+                    <li>Mengurangi risiko cedera akibat kontak langsung dengan permukaan tajam, kotor, atau berbahaya.
+                    </li>
+                    <li>Membantu identifikasi cepat terhadap pekerja di area berisiko tinggi untuk memudahkan tindakan
+                        darurat.</li>
+                    <li>Menunjukkan tingkat kewenangan dan akses area kerja, seperti karyawan, kontraktor, dan tamu.
+                    </li>
+                    <li>Memastikan kepatuhan terhadap standar keselamatan kerja (K3) yang berlaku di Petrokimia Gresik.
+                    </li>
+                </ul>
+                <p>
+                    Seragam kerja wajib digunakan di seluruh area operasional untuk menjaga keselamatan,
+                    keteraturan, dan profesionalitas dalam lingkungan industri Petrokimia Gresik.
+                </p>
+            </div>
+        </div>
+
+        <div class="apd-row">
+            <!-- Bagian Kacamata -->
+            <div class="apd-section">
+                <h3 class="apd-section-title masker">Kacamata Safety</h3>
+                <div class="apd-grid">
+                    <div class="apd-item">
+                        <img src="img/safety-glasess1.jpg" alt="Half Face Mask">
+                        <p>Safety Glasses</p>
+                    </div>
+                    <div class="apd-item">
+                        <img src="img/safety-glasess2.jpg" alt="Full Face Mask">
+                        <p>Chemical Safety Goggles</p>
+                    </div>
+                </div>
+                <div>
+                    <p><strong>Kacamata Safety</strong> digunakan untuk:</p>
+                    <ul>
+                        <li>Melindungi mata dari percikan bahan kimia, debu, dan serpihan logam saat bekerja.</li>
+                        <li>Mencegah cedera akibat partikel kecil yang terbang di area kerja.</li>
+                        <li>Mengurangi risiko iritasi akibat paparan asap atau uap kimia.</li>
+                        <li>Menjaga penglihatan tetap jelas di lingkungan kerja berisiko tinggi.</li>
+                    </ul>
+                    <p>Kacamata safety wajib digunakan saat bekerja di area pengelasan, pemotongan, pengeboran, dan
+                        laboratorium kimia.</p>
+                </div>
+            </div>
+
+            <!-- Bagian Welding -->
+            <div class="apd-section">
+                <h3 class="apd-section-title sepatu">Welding</h3>
+                <div class="apd-grid">
+                    <div class="apd-item">
+                        <img src="img/welding-helmet.jpg" alt="Sepatu Safety">
+                        <p>Welding Helmet</p>
+                    </div>
+                </div>
+                <div>
+                    <p><strong>Welding Helmet</strong> digunakan untuk:</p>
+                    <ul>
+                        <li>Melindungi wajah dan mata dari sinar ultraviolet (UV) dan inframerah (IR) saat pengelasan.
+                        </li>
+                        <li>Mencegah luka bakar akibat percikan api dan logam cair.</li>
+                        <li>Mengurangi risiko kebutaan sementara akibat cahaya intens dari proses las.</li>
+                    </ul>
+                    <p>Helm las wajib digunakan oleh pekerja pengelasan untuk menjaga keselamatan mata dan wajah.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="apd-row">
+            <!-- Bagian Sarung Tangan -->
+            <div class="apd-section">
+                <h3 class="apd-section-title masker">Sarung Tangan</h3>
+                <div class="apd-grid">
+                    <div class="apd-item">
+                        <img src="img/safety-gloves.jpeg" alt="Half Face Mask">
+                        <p>Safety Gloves</p>
+                    </div>
+                    <div class="apd-item">
+                        <img src="img/sarung-tangan.jpeg" alt="Full Face Mask">
+                        <p>Sarung Tangan Karet</p>
+                    </div>
+                </div>
+                <div>
+                    <p><strong>Sarung Tangan</strong> digunakan untuk:</p>
+                    <ul>
+                        <li>Melindungi tangan dari panas, bahan kimia, dan goresan benda tajam.</li>
+                        <li>Mencegah luka bakar dan iritasi kulit saat bekerja di area berisiko.</li>
+                        <li>Memberikan pegangan yang lebih aman terhadap alat dan material kerja.</li>
+                    </ul>
+                    <p>Pilih jenis sarung tangan sesuai risiko pekerjaan seperti panas, listrik, atau bahan kimia.</p>
+                </div>
+            </div>
+
+            <!-- Bagian Pelindung Telinga -->
+            <div class="apd-section">
+                <h3 class="apd-section-title sepatu">Pelidung Telinga</h3>
+                <div class="apd-grid">
+                    <div class="apd-item">
+                        <img src="img/earing-protection.jpeg" alt="Sepatu Safety">
+                        <p>Earing Protection</p>
+                    </div>
+                </div>
+                <div>
+                    <p><strong>Pelindung Telinga</strong> digunakan untuk:</p>
+                    <ul>
+                        <li>Mengurangi paparan kebisingan yang dapat merusak pendengaran.</li>
+                        <li>Menjaga konsentrasi kerja di area dengan tingkat suara tinggi.</li>
+                        <li>Mencegah gangguan kesehatan seperti tinnitus atau kehilangan pendengaran permanen.</li>
+                    </ul>
+                    <p>Pelindung telinga wajib digunakan di area kerja dengan kebisingan melebihi 85 dB.</p>
                 </div>
             </div>
         </div>
@@ -607,7 +971,7 @@
 
                         <li class="apd-item">
                             <div class="apd-icon">
-                                <img src="img/face-shield.png" alt="Katelpak">
+                                <img src="img/katelpak.jpeg" alt="Katelpak">
                             </div>
                             <div class="apd-content">
                                 <div class="apd-name">Katelpak</div>
@@ -681,20 +1045,129 @@
                     </ul>
                 </div>
             </div>
+        </section>
+    </div>
 
-            <!-- JavaScript Libraries -->
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="lib/wow/wow.min.js"></script>
-            <script src="lib/easing/easing.min.js"></script>
-            <script src="lib/waypoints/waypoints.min.js"></script>
-            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-            <script src="lib/counterup/counterup.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tombol Back ke Halaman Utama -->
+    <a href="index.html" class="back-home-btn">
+        <i class="fas fa-arrow-left"></i>
+        <span>Kembali ke Halaman Utama</span>
+    </a>
 
-            <!-- Template Javascript -->
-            <script src="js/main.js"></script>
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5" style="font-size: 13px;">
 
+                <!-- Tentang Kami -->
+                <div class="col-lg-3 col-md-6">
+                    <p>PT Petrokimia Gresik merupakan Produsen Pupuk Terlengkap di Indonesia yang memproduksi
+                        berbagai
+                        macam pupuk dan bahan kimia untuk solusi agroindustri.</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-primary rounded-circle me-2"
+                            href="https://www.facebook.com/petrokimiagresikofficial" target="_blank"
+                            aria-label="Facebook PT Petrokimia Gresik">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href="https://twitter.com/petrokimiaG"
+                            target="_blank" aria-label="Twitter PT Petrokimia Gresik">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"
+                            href="https://www.youtube.com/@PetrokimiaGresikOfficial" target="_blank"
+                            aria-label="YouTube PT Petrokimia Gresik">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2"
+                            href="https://www.instagram.com/petrokimiagresikofficial/" target="_blank"
+                            aria-label="Instagram PT Petrokimia Gresik">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kantor Pusat -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4" style="font-size: 15px;">KANTOR PUSAT</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Jenderal Ahmad Yani - Gresik
+                        61119</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
+                        <a href="tel:0313981811" class="footer-link">031-3981811</a>,
+                        <a href="tel:0313982100" class="footer-link">3982100</a>,
+                        <a href="tel:0313982200" class="footer-link">3982200</a>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-fax me-3"></i>031-3981722, 3982272</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
+                        <a href="mailto:pg@petrokimia-gresik.com" class="footer-link">pg@petrokimia-gresik.com</a>
+                    </p>
+                </div>
+
+                <!-- Kantor Perwakilan -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4" style="font-size: 15px;">KANTOR PERWAKILAN</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Tanah Abang II No. 63, Petojo
+                        Selatan,
+                        Gambir - Jakarta Pusat 10160</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
+                        <a href="tel:02122035019" class="footer-link">021-22035019</a>,
+                        <a href="tel:02122036050" class="footer-link">021-22036050</a>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-mobile-alt me-3"></i>
+                        <a href="tel:08118303014" class="footer-link">0811 8303 014</a>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
+                        <a href="mailto:perjaka@petrokimia-gresik.com"
+                            class="footer-link">perjaka@petrokimia-gresik.com</a>
+                    </p>
+                </div>
+
+                <!-- Pusat Layanan Pelanggan -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4" style="font-size: 15px;">PUSAT LAYANAN PELANGGAN</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Gedung Graha Phonska, Lantai 4 Jl.
+                        Tanah
+                        Abang III No.16 Jakarta Pusat 10160</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
+                        <a href="tel:08001008001" class="footer-link">0800 1008001 (Bebas Pulsa)</a>
+                    </p>
+                    <p class="mb-2"><i class="fab fa-whatsapp me-3"></i>
+                        <a href="https://wa.me/628119918001?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20produk%20PT%20Petrokimia%20Gresik"
+                            target="_blank" class="footer-link">0811 9918 001</a>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
+                        <a href="mailto:konsumen@pupuk-indonesia.com"
+                            class="footer-link">konsumen@pupuk-indonesia.com</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+        <div class="container text-center">
+            <p class="mb-2">Copyright &copy; <span id="current-year">2025</span> <a class="fw-semi-bold"
+                    href="#">Kelompok 7</a>, All Right Reserved.</p>
+            <p class="mb-0">Mata Kuliah Keselamatan dan Kesehatan Kerja</p>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
