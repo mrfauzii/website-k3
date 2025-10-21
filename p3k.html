@@ -353,23 +353,21 @@
         <a href="index.html" class="navbar-brand ps-5 me-0">
             <h1 class="text-white m-0">K3 Perusahaan</h1>
         </a>
-        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-            </div>
-        </div>
+
+        <!-- Tombol Back hanya ikon panah -->
+        <a href="index.html"
+            class="btn btn-primary ms-auto rounded-circle d-flex align-items-center justify-content-center"
+            style="width: 45px; height: 45px;">
+            <i class="bi bi-arrow-left"></i>
+        </a>
     </nav>
     <!-- Navbar End -->
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h6 class="text-white animated slideInRight fw-bold" style="font-size: 28px;">
-                Pertolongan Pertama (P3K)
+            <h6 class="text-white animated slideInRight fw-bold" style="font-size: 28px; text-align: center;">
+                Pertolongan Pertama Pada Kecelakaan(P3K)
             </h6>
         </div>
     </div>
@@ -520,19 +518,19 @@
                     </div>
                 </div>
 
-                <!-- Syok -->
+                <!-- Pencegahan Jatuh dari Ketinggian -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card border-0 shadow-sm h-100 text-center p-4">
                         <div class="icon-wrapper bg-orange rounded-circle mx-auto mb-3 p-3">
-                            <i class="fas fa-procedures text-white" style="font-size: 2rem;"></i>
+                            <i class="fas fa-hard-hat text-white" style="font-size: 2rem;"></i>
                         </div>
-                        <h5 class="text-dark mb-2">Syok</h5>
+                        <h5 class="text-dark mb-2">Pencegahan Jatuh dari Ketinggian</h5>
                         <p class="text-muted small">
-                            Mengenali tanda-tanda syok dan stabilisasi korban sebelum evakuasi.
+                            Mengetahui langkah-langkah pencegahan agar pekerja aman saat bekerja di ketinggian.
                         </p>
                         <button class="btn btn-outline-orange btn-sm mt-auto" data-bs-toggle="modal"
-                            data-bs-target="#modalSyok">
-                            <i class="fas fa-bed me-2"></i>Cara Penanganan
+                            data-bs-target="#modalJatuh">
+                            <i class="fas fa-shield-alt me-2"></i>Langkah Pencegahan
                         </button>
                     </div>
                 </div>
@@ -962,51 +960,55 @@
         </div>
     </div>
 
-    <!-- Modal: Syok -->
-    <div class="modal fade" id="modalSyok" tabindex="-1" aria-labelledby="modalSyokLabel" aria-hidden="true">
+    <!-- Modal: Penanganan Jatuh dari Ketinggian -->
+    <div class="modal fade" id="modalJatuh" tabindex="-1" aria-labelledby="modalJatuhLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-orange text-white">
-                    <h5 class="modal-title" id="modalSyokLabel">
-                        <i class="fas fa-procedures me-2"></i>Penanganan Syok
+                    <h5 class="modal-title" id="modalJatuhLabel">
+                        <i class="fas fa-user-injured me-2"></i>Penanganan Jatuh dari Ketinggian
                     </h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
+                        <!-- Tanda-Tanda Cedera -->
                         <div class="col-md-6">
                             <div class="alert alert-orange">
-                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Tanda-Tanda Syok:</h6>
+                                <h6><i class="fas fa-exclamation-triangle me-2"></i>Tanda-Tanda Cedera Serius:</h6>
                                 <ul class="small mb-0">
-                                    <li>Kulit pucat, dingin, dan berkeringat</li>
-                                    <li>Denyut nadi cepat dan lemah</li>
-                                    <li>Pernapasan cepat dan dangkal</li>
-                                    <li>Gelisah, cemas, atau bingung</li>
-                                    <li>Mual atau muntah</li>
-                                    <li>Penurunan kesadaran</li>
+                                    <li>Nyeri hebat pada tulang belakang, kepala, atau panggul</li>
+                                    <li>Kesulitan bernapas atau bergerak</li>
+                                    <li>Pendarahan hebat atau luka terbuka</li>
+                                    <li>Kehilangan kesadaran</li>
+                                    <li>Kelumpuhan sebagian tubuh</li>
                                 </ul>
                             </div>
                         </div>
+                        <!-- Langkah Penanganan -->
                         <div class="col-md-6">
                             <div class="alert alert-warning">
-                                <h6><i class="fas fa-bed me-2"></i>Langkah Penanganan:</h6>
+                                <h6><i class="fas fa-hand-holding-medical me-2"></i>Langkah Penanganan:</h6>
                                 <ol class="small mb-0">
-                                    <li>Baringkan korban dengan posisi telentang</li>
-                                    <li>Elevasi kaki 30-45 cm (kecuali cedera kepala/leher/panggul)</li>
-                                    <li>Jaga suhu tubuh dengan selimut/jaket</li>
-                                    <li>Longgarkan pakaian ketat</li>
-                                    <li>Jangan beri makanan/minuman</li>
-                                    <li>Monitor terus dan siapkan evakuasi medis</li>
+                                    <li>Segera pastikan area aman sebelum mendekati korban</li>
+                                    <li>Jangan pindahkan korban jika dicurigai cedera tulang belakang</li>
+                                    <li>Periksa kesadaran dan pernapasan korban</li>
+                                    <li>Jika korban tidak bernapas, lakukan RJP (resusitasi jantung paru)</li>
+                                    <li>Hentikan perdarahan dengan menekan luka menggunakan kain bersih</li>
+                                    <li>Jaga korban tetap hangat dan tenang</li>
+                                    <li>Segera hubungi tim medis atau evakuasi ke fasilitas kesehatan</li>
                                 </ol>
                             </div>
                         </div>
                     </div>
                     <div class="mt-3 p-3 bg-light rounded">
-                        <h6 class="text-orange mb-2"><i class="fas fa-clock me-2"></i>Waktu Kritis:</h6>
-                        <p class="small mb-0">Syok yang tidak ditangani dapat menyebabkan kegagalan organ multiple dalam
-                            1-2 jam. Identifikasi dan tangani penyebab syok (perdarahan, dehidrasi, dll) sesegera
-                            mungkin.</p>
+                        <h6 class="text-orange mb-2"><i class="fas fa-info-circle me-2"></i>Catatan Penting:</h6>
+                        <p class="small mb-0">
+                            Hindari memindahkan korban tanpa peralatan medis jika terdapat kecurigaan cedera tulang
+                            belakang.
+                            Prioritaskan stabilisasi kondisi korban sambil menunggu bantuan medis tiba.
+                        </p>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -1102,110 +1104,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Tombol Back ke Halaman Utama -->
-    <a href="index.html" class="back-home-btn">
-        <i class="fas fa-arrow-left"></i>
-        <span>Kembali ke Halaman Utama</span>
-    </a>
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5" style="font-size: 13px;">
-
-                <!-- Tentang Kami -->
-                <div class="col-lg-3 col-md-6">
-                    <p>PT Petrokimia Gresik merupakan Produsen Pupuk Terlengkap di Indonesia yang memproduksi berbagai
-                        macam pupuk dan bahan kimia untuk solusi agroindustri.</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-primary rounded-circle me-2"
-                            href="https://www.facebook.com/petrokimiagresikofficial" target="_blank"
-                            aria-label="Facebook PT Petrokimia Gresik">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href="https://twitter.com/petrokimiaG"
-                            target="_blank" aria-label="Twitter PT Petrokimia Gresik">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2"
-                            href="https://www.youtube.com/@PetrokimiaGresikOfficial" target="_blank"
-                            aria-label="YouTube PT Petrokimia Gresik">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2"
-                            href="https://www.instagram.com/petrokimiagresikofficial/" target="_blank"
-                            aria-label="Instagram PT Petrokimia Gresik">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Kantor Pusat -->
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4" style="font-size: 15px;">KANTOR PUSAT</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Jenderal Ahmad Yani - Gresik 61119</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
-                        <a href="tel:0313981811" class="footer-link">031-3981811</a>,
-                        <a href="tel:0313982100" class="footer-link">3982100</a>,
-                        <a href="tel:0313982200" class="footer-link">3982200</a>
-                    </p>
-                    <p class="mb-2"><i class="fa fa-fax me-3"></i>031-3981722, 3982272</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
-                        <a href="mailto:pg@petrokimia-gresik.com" class="footer-link">pg@petrokimia-gresik.com</a>
-                    </p>
-                </div>
-
-                <!-- Kantor Perwakilan -->
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4" style="font-size: 15px;">KANTOR PERWAKILAN</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. Tanah Abang II No. 63, Petojo Selatan,
-                        Gambir - Jakarta Pusat 10160</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
-                        <a href="tel:02122035019" class="footer-link">021-22035019</a>,
-                        <a href="tel:02122036050" class="footer-link">021-22036050</a>
-                    </p>
-                    <p class="mb-2"><i class="fa fa-mobile-alt me-3"></i>
-                        <a href="tel:08118303014" class="footer-link">0811 8303 014</a>
-                    </p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
-                        <a href="mailto:perjaka@petrokimia-gresik.com"
-                            class="footer-link">perjaka@petrokimia-gresik.com</a>
-                    </p>
-                </div>
-
-                <!-- Pusat Layanan Pelanggan -->
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4" style="font-size: 15px;">PUSAT LAYANAN PELANGGAN</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Gedung Graha Phonska, Lantai 4 Jl. Tanah
-                        Abang III No.16 Jakarta Pusat 10160</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>
-                        <a href="tel:08001008001" class="footer-link">0800 1008001 (Bebas Pulsa)</a>
-                    </p>
-                    <p class="mb-2"><i class="fab fa-whatsapp me-3"></i>
-                        <a href="https://wa.me/628119918001?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20produk%20PT%20Petrokimia%20Gresik"
-                            target="_blank" class="footer-link">0811 9918 001</a>
-                    </p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>
-                        <a href="mailto:konsumen@pupuk-indonesia.com"
-                            class="footer-link">konsumen@pupuk-indonesia.com</a>
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright bg-dark py-4">
-        <div class="container text-center">
-            <p class="mb-2">Copyright &copy; <span id="current-year">2025</span> <a class="fw-semi-bold"
-                    href="#">Kelompok 7</a>, All Right Reserved.</p>
-            <p class="mb-0">Mata Kuliah Keselamatan dan Kesehatan Kerja</p>
-        </div>
-    </div>
-    <!-- Copyright End -->
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
