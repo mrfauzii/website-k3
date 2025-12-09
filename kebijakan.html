@@ -408,6 +408,105 @@
                 font-size: 1rem !important;
             }
         }
+
+        /* Kebijakan K3 Section Styles */
+        .k3-policy-section {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+        }
+
+        .policy-statement .card {
+            border-left: 5px solid #0066CC;
+            border-right: 5px solid #009933;
+        }
+
+        .management-principles .principle-icon {
+            transition: all 0.3s ease;
+        }
+
+        .management-principles .principle-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .k3lh-commitment .card {
+            transition: all 0.3s ease;
+            border-top: 3px solid transparent;
+        }
+
+        .k3lh-commitment .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .k3lh-commitment .col-lg-4:nth-child(1) .card {
+            border-top-color: #0066CC;
+        }
+
+        .k3lh-commitment .col-lg-4:nth-child(2) .card {
+            border-top-color: #009933;
+        }
+
+        .k3lh-commitment .col-lg-4:nth-child(3) .card {
+            border-top-color: #003366;
+        }
+
+        /* Animation for principle items */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .management-principles .col-md-6 {
+            animation: fadeInLeft 0.5s ease forwards;
+        }
+
+        .management-principles .col-md-6:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .management-principles .col-md-6:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .management-principles .col-md-6:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .management-principles .col-md-6:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .management-principles .col-md-6:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .k3-policy-section .display-5 {
+                font-size: 2rem !important;
+            }
+
+            .policy-statement .card-body {
+                padding: 2rem !important;
+            }
+
+            .management-principles .d-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .management-principles .principle-icon {
+                margin-bottom: 1rem;
+                margin-right: 0 !important;
+            }
+        }
     </style>
 </head>
 
@@ -466,7 +565,7 @@
                             <div class="text-center mb-4">
                                 <div class="icon-wrappe mx-auto mb-3"
                                     style="width: 70px; height: 70px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                   <i class="bi bi-compass-fill text-white" style="font-size: 1.8rem;"></i>
+                                    <i class="bi bi-compass-fill text-white" style="font-size: 1.8rem;"></i>
                                 </div>
                                 <h3 class="text-white mb-0">Visi Perusahaan</h3>
                             </div>
@@ -604,6 +703,110 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Kebijakan Sistem Manajemen K3 Section -->
+    <section class="k3-policy-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3" style="color: #003366;">KEBIJAKAN SISTEM MANAJEMEN K3</h2>
+                <p class="lead text-muted mb-4">Komitmen terhadap Keselamatan dan Kesehatan Kerja (K3) sebagai Nilai
+                    Utama Perusahaan</p>
+                <div class="divider mx-auto"
+                    style="width: 150px; height: 4px; background: linear-gradient(to right, #0066CC, #009933);">
+                </div>
+            </div>
+
+            <!-- Pernyataan Komitmen -->
+            <div class="policy-statement mb-5">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <div class="icon-wrapper mx-auto mb-3"
+                                style="width: 80px; height: 80px; background: linear-gradient(135deg, #0066CC, #009933); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-shield-check text-white" style="font-size: 2rem;"></i>
+                            </div>
+                            <h3 style="color: #003366;">Komitmen Puncak Manajemen</h3>
+                            <p class="text-muted">Sebagai Objek Vital Nasional Sektor Industri, PT Petrokimia Gresik
+                                menempatkan aspek K3 sebagai komitmen yang tercermin dalam urutan pertama <strong>Tata
+                                    Nilai Perusahaan (Corporate Values)</strong> dan terus berupaya mencapai
+                                <strong>“Safety, Health, Environmental (SHE) Excellence”</strong></p>
+                        </div>
+
+                        <!-- Ringkasan Kebijakan K3 -->
+                        <div class="policy-highlights">
+                            <h5 class="mb-4 text-center" style="color: #0066CC;">PT Petrokimia Gresik berkomitmen untuk:
+                            </h5>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start p-3 rounded" style="background: #E6F2FF;">
+                                        <i class="bi bi-1-circle-fill text-primary fs-4 me-3"></i>
+                                        <div>
+                                            <h6 style="color: #003366;">Menjadikan K3LH sebagai Prioritas Utama</h6>
+                                            <p class="small mb-0">Menempatkan <strong>Keselamatan, Kesehatan Kerja dan
+                                                    Lingkungan Hidup (K3LH)</strong> sebagai prioritas utama dalam
+                                                setiap aktivitas dan seluruh kegiatan siklus hidup produk.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start p-3 rounded" style="background: #FFEBEE;">
+                                        <i class="bi bi-2-circle-fill text-danger fs-4 me-3"></i>
+                                        <div>
+                                            <h6 style="color: #003366;">Mencegah Kecelakaan dan Penyakit Akibat Kerja
+                                            </h6>
+                                            <p class="small mb-0">Menghilangkan atau mengurangi risiko melalui analisis
+                                                bahaya, pengendalian risiko, dan peningkatan kompetensi karyawan untuk
+                                                menciptakan budaya kerja yang aman.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start p-3 rounded" style="background: #E6FFE6;">
+                                        <i class="bi bi-3-circle-fill text-success fs-4 me-3"></i>
+                                        <div>
+                                            <h6 style="color: #003366;">Memitigasi Risiko Proses & Insiden Besar</h6>
+                                            <p class="small mb-0">Terus melakukan upaya untuk memitigasi dan mengurangi
+                                                risiko terjadinya peristiwa keselamatan proses dan insiden skala besar
+                                                yang dapat membahayakan pekerja dan lingkungan.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start p-3 rounded" style="background: #FFF4E6;">
+                                        <i class="bi bi-4-circle-fill text-warning fs-4 me-3"></i>
+                                        <div>
+                                            <h6 style="color: #003366;">Kepatuhan & Peningkatan Berkelanjutan</h6>
+                                            <p class="small mb-0">Mentaati seluruh peraturan perundangan, tanggap
+                                                terhadap isu global, serta berkomitmen pada <strong>Responsible
+                                                    Care</strong> dan tanggung jawab sosial perusahaan
+                                                (CSR).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cakupan & Penerapan -->
+            <div class="policy-scope mb-5">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 style="color: #003366;" class="mb-3"><i class="bi bi-people-fill me-2"></i>Cakupan Kebijakan
+                        </h5>
+                        <p class="mb-0">Kebijakan K3 ini tidak hanya berlaku bagi karyawan perusahaan, tetapi juga
+                            mencakup <strong>kontraktor dan pihak ketiga</strong> yang bekerja di lingkungan
+                            operasional. Seluruh pihak diwajibkan mematuhi standar keselamatan untuk mewujudkan tujuan
+                            <strong>"zero accident"</strong></p>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </section>
 
